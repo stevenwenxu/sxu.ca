@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My Blog</title>
+   <link rel="stylesheet" type="text/css" href="/css/main.css">
+   <link rel="stylesheet" type="text/css" href="/css/blog.css">
+</head>
+<body>
+   <div class="sidebar">
+      <h2>
+         <ul class="sb">
+            <li><a href="/blog">Go Back</a></li>
+            <br>
+            <li><a href="/">Main page</a></li>
+         </ul>
+      </h2>
+   </div>
+
+   <div class="main">
+      <div class="main-center">
+         {{entry.subject}}
+      </div>
+      <div class="main-body">
+         <div class="post">
+            <div class="post-heading">
+               <div class="post-date">
+                  {{entry.created.strftime("%b %d, %Y")}}
+               </div>
+            </div>
+            <pre class="post-content-all">
+               {{entry.content}}
+            </pre>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

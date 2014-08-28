@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>New Post</title>
+   <link rel="stylesheet" type="text/css" href="/css/main.css">
+   <link rel="stylesheet" type="text/css" href="/css/blog.css">
+</head>
+<body>
+   <div class="sidebar">
+      <h2>
+         <ul class="sb">
+            <li><a href="/blog/newpost">New Post</a></li>
+            <br>
+            <li><a href="/">Main page</a></li>
+         </ul>
+      </h2>
+   </div>
+
+   <div class="main">
+      <div class="main-center">
+         New Post
+         <form method="post">
+            <label>
+               <div>subject</div>
+               <input type="text" name="subject" value="{{subject}}">
+            </label>
+            <label>
+               <div>blog</div>
+               <textarea name="content">{{content}}</textarea>
+            </label>
+            <div class="error">{{error}}</div>
+            <input type="submit">
+         </form>
+      </div>
+   </div>
+</body>
+</html>
+
