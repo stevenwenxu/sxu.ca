@@ -1,0 +1,162 @@
+
+h2 {
+   font-size: 52px;
+   text-align: center;
+}
+
+hr {
+   margin: 40px 0;
+   border-color: #727878;
+   opacity: 0.2;
+}
+
+.jumbotron {
+   background-attachment: fixed;
+   background-image: url('../pictures/background.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100%;
+   margin-bottom: 0;
+   border-radius: 0;
+   padding: 0 !important;
+}
+
+.layer {
+   background-color: black;
+   height: inherit;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   opacity: 0.4;
+}
+
+.background-white { 
+   padding-bottom: 40px;
+   background: #FFFFFF;
+}
+
+.background-yellow {
+   background: #FFCC99;
+   padding-top: 40px;
+}
+
+.background-gray {
+   background: #434242;
+   padding-top: 40px;
+}
+
+.jumbotron .container { position: relative; top: 28%; z-index: 4; text-align: center; }
+.jumbotron .container > * { text-align: center; color: #FFFFFF; }
+.jumbotron .container h1 { padding-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(255,255,255,0.35); display: inline-block; }
+.jumbotron .container .sub { font-size: 28px; }
+
+body {
+   //background-color: #FFCC99;
+   line-height: 1.64;
+   font-size: 15px;
+}
+
+body.navbar-is-fixed-top {
+   padding-top: 0 !important;
+}
+
+#me {
+   border-radius: 100%;
+   margin-top: 20px;
+   width: 70%;
+   max-width: 246px;
+   height: auto;
+}
+
+.col-sm-12 {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+
+.sub {
+   font-size: 21px;
+   color: #727878;
+   font-weight: 200;
+   text-align: center;
+}
+
+.container {
+   padding: 40px 100px;
+}
+
+.scroll-down {
+   float: right;
+}
+
+#experiences .experience {
+   margin-bottom: 50px;
+}
+
+.no-bullets {
+   list-style-type: none;
+   padding: 0;
+}
+
+.ability-title {
+   display: inline-block;
+   width: 60%;
+}
+
+.ability-score {
+   float: right;
+}
+
+#abilities .no-bullets li {
+   padding: 1px;
+}
+
+#abilities .no-bullets li:hover {
+   margin: 2px;
+   background-color: #FFCC99;
+}
+
+#interests .left {
+   float: left;
+   text-align: left;
+}
+
+#interests .right {
+   float: right;
+   text-align: right;
+}
+
+.fa-stack {
+   color: white;
+   opacity: 0.6;
+}
+
+.fa-stack:hover {
+   color: gold;
+   opacity: 1;
+}
+
+.contact {
+   display: inline;
+   margin: auto 5%;
+}
+
+#contact h2 {
+   color: #FFFFFF;
+}
+
+#contact .row {
+   text-align: center;
+}
+
+#credits {
+   text-align: center;
+}
+
+#credits li {
+   opacity: 0.6;
+   display: inline;
+   line-height: 32px;
+}
