@@ -1,7 +1,7 @@
 $(document).ready(function() {
    $('.jumbotron').height($(window).height());
    var $root = $('html, body');
-   $('nav a').click(function() {
+   $('nav ul:not(.navbar-right) a, .navbar-brand').click(function() {
       event.preventDefault();
       $root.animate({
          scrollTop: $(this.hash).offset().top
