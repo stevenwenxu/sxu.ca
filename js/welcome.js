@@ -1,5 +1,12 @@
 $(document).ready(function() {
    $('.jumbotron').height($(window).height());
+   var $root = $('html, body');
+   $('nav a').click(function() {
+      event.preventDefault();
+      $root.animate({
+         scrollTop: $(this.hash).offset().top
+      }, 600);
+   });
    layout();
 });
 
