@@ -21,15 +21,15 @@ $(window).scroll(function() {
    $('nav').find('.active').removeClass('active');
 
    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
-      $('#bs-example-navbar-collapse-1 > ul:nth-child(1) > li:nth-child(5) > a').parent().addClass('active');
+      $('#main-nav > ul:nth-child(1) > li:nth-child(5) > a').parent().addClass('active');
    } else if(pos >= $('#interests').position().top) {
-      $('#bs-example-navbar-collapse-1 > ul:nth-child(1) > li:nth-child(4) > a').parent().addClass('active');
+      $('#main-nav > ul:nth-child(1) > li:nth-child(4) > a').parent().addClass('active');
    } else if(pos >= $('#abilities').position().top) {
-      $('#bs-example-navbar-collapse-1 > ul:nth-child(1) > li:nth-child(3) > a').parent().addClass('active');
+      $('#main-nav > ul:nth-child(1) > li:nth-child(3) > a').parent().addClass('active');
    } else if(pos >= $('#experiences').position().top) {
-      $('#bs-example-navbar-collapse-1 > ul:nth-child(1) > li:nth-child(2) > a').parent().addClass('active');
+      $('#main-nav > ul:nth-child(1) > li:nth-child(2) > a').parent().addClass('active');
    } else if(pos >= $('#profile').position().top) {
-      $('#bs-example-navbar-collapse-1 > ul:nth-child(1) > li:nth-child(1) > a').parent().addClass('active');
+      $('#main-nav > ul:nth-child(1) > li:nth-child(1) > a').parent().addClass('active');
    }
 })
 
