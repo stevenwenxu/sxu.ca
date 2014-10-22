@@ -1,4 +1,3 @@
-
 h2 {
    font-size: 52px;
    text-align: center;
@@ -14,14 +13,21 @@ hr {
    opacity: 0.9;
 }
 
+@media (max-width: 768px) {
+   .navbar .navbar-collapse {
+      text-align: center;
+   }
+}
+
 .jumbotron {
    background-attachment: fixed;
    background-image: url('../pictures/background.jpg');
+   -moz-background-size: cover;
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
    height: 100%;
    margin-bottom: 0;
-   border-radius: 0;
    padding: 0 !important;
 }
 
@@ -36,7 +42,7 @@ hr {
    opacity: 0.4;
 }
 
-.background-white { 
+.background-white {
    padding-bottom: 40px;
    background: #FFFFFF;
 }
@@ -51,20 +57,27 @@ hr {
    padding-top: 40px;
 }
 
-.jumbotron .container { 
-   position: relative; top: 28%; z-index: 4; text-align: center; 
+.jumbotron .container {
+   position: relative;
+   top: 28%;
+   z-index: 4;
+   text-align: center;
 }
 
 .jumbotron .container > * {
-   text-align: center; color: #FFFFFF;
+   text-align: center;
+   color: #FFFFFF;
 }
 
-.jumbotron .container h1 { 
-   padding-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(255,255,255,0.35); display: inline-block; 
+.jumbotron .container h1 {
+   padding-bottom: 20px;
+   border-bottom: 1px solid #FFFFFF;
+   border-bottom-color: rgba(255,255,255,0.35);
+   display: inline-block;
 }
 
-.jumbotron .container .sub { 
-   font-size: 28px; 
+.jumbotron .container .sub {
+   font-size: 28px;
 }
 
 body {
@@ -73,6 +86,8 @@ body {
 }
 
 #me {
+   -webkit-border-radius: 100%;
+   -moz-border-radius: 100%;
    border-radius: 100%;
    margin-top: 20px;
    width: 70%;
@@ -84,7 +99,6 @@ body {
    padding-left: 0;
    padding-right: 0;
 }
-
 
 .sub {
    font-size: 21px;
@@ -170,3 +184,4 @@ body {
    display: inline;
    line-height: 32px;
 }
+

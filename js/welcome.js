@@ -1,5 +1,7 @@
 $(document).ready(function() {
+   // resize jumbotron
    $('.jumbotron').height($(window).height());
+   // smooth scrolling
    var $root = $('html, body');
    $('nav ul:not(.navbar-right) a, .navbar-brand').click(function() {
       event.preventDefault();
@@ -7,10 +9,12 @@ $(document).ready(function() {
          scrollTop: $(this.hash).offset().top
       }, 600);
    });
+   // detech screen size and adjust css
    layout();
 });
 
 $(window).resize(layout);
+
 $(window).scroll(function() {
    var navHeight = $('nav').height();
    var pos = $(window).scrollTop() + navHeight;
