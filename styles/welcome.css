@@ -3,6 +3,10 @@ h2 {
    text-align: center;
 }
 
+a:hover {
+   text-decoration: none;
+}
+
 hr {
    margin: 40px 0;
    border-color: #727878;
@@ -117,6 +121,12 @@ body {
 
 #experiences .experience {
    margin-bottom: 50px;
+}
+
+.hid {
+   display: none;
+   margin-left: 15px;
+
 }
 
 .no-bullets {

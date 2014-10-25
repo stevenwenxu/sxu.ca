@@ -9,8 +9,9 @@ $(document).ready(function() {
          scrollTop: $(this.hash).offset().top
       }, 600);
    });
-   // detech screen size and adjust css
+   // detect screen size and adjust css
    layout();
+
 });
 
 $(window).resize(layout);
@@ -43,4 +44,12 @@ function layout() {
       $('.hidden-small').css('display', '');
       $('#abilities .row').css('text-align', '').css('margin', '');
    }
+}
+
+function display(selector) {
+   var target = $(selector);
+   target.fadeIn('fast');
+   setTimeout(function() {
+      target.fadeOut('slow');
+   }, 1500);
 }
