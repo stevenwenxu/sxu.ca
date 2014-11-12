@@ -5,6 +5,7 @@ h2 {
 
 a:hover {
    text-decoration: none;
+   color: #00bc12;
 }
 
 hr {
@@ -51,14 +52,46 @@ hr {
    background: #FFFFFF;
 }
 
-.background-yellow {
-   background: #FFCC99;
+/*.background-white ::selection {
+   background: #2e4e7e;
+}
+
+.background-white ::-moz-selection {
+   background: #2e4e7e;
+}*/
+
+.background-blue {
+   /*background: rgba(0, 154, 253, 0.54);*/
+   background: #2e4e7e;
+   color: white;
    padding-top: 40px;
 }
+
+.background-blue h3,
+.background-blue .col-md-8 strong {
+   color: #e29c45;
+}
+
+.background-blue .sub {
+   color: #00bc12;
+}
+
+/*.background-blue ::selection {
+   background: white;
+}
+
+.background-blue ::-moz-selection {
+   background:white;
+}*/
 
 .background-gray {
    background: #434242;
    padding-top: 40px;
+}
+
+.navbar-nav a:hover, .active a {
+   border-bottom: 3px solid #e29c45;
+   padding-bottom: 12px !important;
 }
 
 .jumbotron .container {
@@ -149,7 +182,8 @@ body {
 
 #abilities .no-bullets li:hover {
    margin: 2px;
-   background-color: #FFCC99;
+   background-color: #e29c45;
+   /*color: white;*/
 }
 
 #interests .left {
@@ -168,7 +202,7 @@ body {
 }
 
 .fa-stack:hover {
-   color: gold;
+   color: #e29c45;
    opacity: 1;
 }
 
