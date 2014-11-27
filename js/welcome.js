@@ -3,8 +3,8 @@ $(document).ready(function() {
    $('.jumbotron').height($(window).height());
    // smooth scrolling
    var $root = $('html, body');
-   $('.navbar-right a, .navbar-brand').click(function() {
-      event.preventDefault();
+   $('.navbar-right a, .navbar-brand').click(function(ev) {
+      ev.preventDefault();
       $root.animate({
          scrollTop: $(this.hash).offset().top
       }, 600);
