@@ -2,8 +2,12 @@ h2 {
    font-size: 52px;
    text-align: center;
 }
+.background-blue a,
+.background-blue a:visited {
+   color: #63ecf2;
+}
 
-a:hover {
+.background-blue a:hover {
    text-decoration: none;
    color: #00bc12;
 }
@@ -221,6 +225,7 @@ body {
 
 #credits {
    text-align: center;
+   color: white;
 }
 
 #credits li {
