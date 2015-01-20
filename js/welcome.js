@@ -1,20 +1,3 @@
-$(document).ready(function() {
-   // resize jumbotron
-   $('.jumbotron').height($(window).height());
-   // smooth scrolling
-   var $root = $('html, body');
-   $('.navbar-right a, .navbar-brand').click(function(ev) {
-      ev.preventDefault();
-      $root.animate({
-         scrollTop: $(this.hash).offset().top
-      }, 600);
-   });
-   // detect screen size and adjust css
-   layout();
-
-});
-
-$(window).resize(layout);
 
 $(window).scroll(function() {
    var navHeight = $('nav').height();
@@ -32,9 +15,13 @@ $(window).scroll(function() {
    } else if(pos >= $('#profile').position().top) {
       $('#main-nav > ul:nth-child(2) > li:nth-child(1) > a').parent().addClass('active');
    }
-})
+});
 
-function layout() {
+function onResize() {
+   // resize jumbotron
+   $('.jumbotron').height($(window).height());
+
+   // adjust css
    if($(window).width() < 992) {
       $('.container').css('text-align', 'center');
       $('.hidden-small').css('display', 'none');
@@ -53,3 +40,21 @@ function display(selector) {
       target.fadeOut('slow');
    }, 1500);
 }
+
+
+$(document).ready(function() {
+
+   // smooth scrolling
+   var $root = $('html, body');
+   $('.navbar-right a, .navbar-brand').click(function(ev) {
+      ev.preventDefault();
+      $root.animate({
+         scrollTop: $(this.hash).offset().top
+      }, 600);
+   });
+   // detect screen size and adjust css
+   onResize();
+
+});
+
+$(window).resize(onResize);
