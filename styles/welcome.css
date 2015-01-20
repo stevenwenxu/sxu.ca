@@ -4,7 +4,7 @@ h2 {
 }
 .background-blue a,
 .background-blue a:visited {
-   color: #63ecf2;
+   color: #51c3c8;
 }
 
 .background-blue a:hover {
@@ -234,3 +234,11 @@ body {
    line-height: 32px;
 }
 
+#credits ul {
+   margin-bottom: 0;
+}
+
+#credits a:hover {
+   text-decoration: none;
+   color: #00bc12;
+}
