@@ -127,9 +127,6 @@ body {
 }
 
 #me {
-   -webkit-border-radius: 100%;
-   -moz-border-radius: 100%;
-   border-radius: 100%;
    margin-top: 20px;
    width: 70%;
    max-width: 246px;
