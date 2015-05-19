@@ -11,6 +11,3 @@ app.get('/blog', function(req, res) {
    res.send('Migrating...');
 });
 
-app.listen(3000);
-console.log('Running at port 3000');
-
