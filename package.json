@@ -24,6 +24,7 @@
     "bootstrap": "^3.3.4",
     "express": "^4.12.4",
     "font-awesome": "^4.3.0",
+    "http": "0.0.0",
     "jquery": "^2.1.4",
     "scrollreveal": "^2.2.0"
   }

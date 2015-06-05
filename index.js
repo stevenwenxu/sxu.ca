@@ -1,5 +1,8 @@
 var express = require("express");
 var app     = express();
+
+var http = require('http');
+
 app.use(express.static(__dirname));
 app.use('/scripts', express.static(__dirname + '/node_modules'));
 
@@ -15,4 +18,8 @@ app.get('/blog', function(req, res) {
 app.listen(app.get('port'), function() {
    console.log('Listening on ', app.get('port'));
 });
+
+setTimeout(function() {
+   http.get('http://www.sxu.ca');
+}, 300000);
 
