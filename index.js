@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/blog', function(req, res) {
-   res.sendFile('blog/_site/index.html');
+   res.sendFile('/blog/_site/index.html');
 });
 
 app.listen(app.get('port'), function() {
