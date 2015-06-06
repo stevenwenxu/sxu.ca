@@ -1,1 +1,4 @@
 node_modules
+blog/_site
+blog/.sass-cache
+blog/_config.yml
