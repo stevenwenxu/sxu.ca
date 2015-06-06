@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/blog', function(req, res) {
-   res.sendFile("blog is missing");
+   res.send("My Blog is missging...");
 });
 
 app.listen(app.get('port'), function() {
