@@ -15,10 +15,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/blog', function(req, res) {
-   res.send("Heroku fail...");
-   setTimeout(function() {
-      res.redirect('http://steven-xu94.github.io/blog');
-   }, 3000);
+   res.redirect('http://steven-xu94.github.io/blog');
 });
 
 app.listen(app.get('port'), function() {
