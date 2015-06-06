@@ -7,7 +7,7 @@ app.use('/scripts', express.static(__dirname + '/node_modules'));
 app.use('/styles', express.static(__dirname + '/styles'));
 app.use('/pictures', express.static(__dirname + '/pictures'));
 app.use('/js', express.static(__dirname + '/js'));
-app.use('/blog', express.static(__dirname + '/blog/_site'));
+app.use('/blog', express.static(__dirname + '/../blog/_site'));
 app.use('/files', express.static(__dirname + '/files'))
 
 app.set('port', (process.env.PORT || 5000));
