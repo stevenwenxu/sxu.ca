@@ -1,33 +1,54 @@
 require('bootstrap');
 require('scrollreveal');
 
-function onResize() {
-   // resize jumbotron
-   $('.jumbotron').height($(window).height());
-}
-
-$(document).ready(function() {
+var initScrollReveal = function() {
     var config = {
-        easing: 'hustle',
         reset: false,
-        // over: '1.3s',
         move: '24px',
         vFactor: 0.4,
     };
     window.sr = new scrollReveal(config);
+};
 
-   // smooth scrolling
-   var $root = $('html, body');
-   $('.navbar-right a, .navbar-brand').click(function(ev) {
-      ev.preventDefault();
-      $root.animate({
-         scrollTop: $(this.hash).offset().top
-      }, 600);
-   });
-   // detect screen size and adjust css
-   onResize();
+var initSmoothScrolling = function () {
+    $('.navbar-right a, .navbar-brand').click(function(ev) {
+        ev.preventDefault();
+        $('body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 600);
+    });
+};
 
+var sendGAClickForLabel = function(eventLabel, callback) {
+    ga('send', {
+        'hitType': 'event',
+        'eventCategory': 'button',
+        'eventAction': 'click',
+        'eventLabel': eventLabel,
+        'hitCallback': callback
+    });
+};
+
+var initGATracking = function() {
+    var $blogBtn = $('.btn-blog'),
+        $resumeBtn = $('.btn-resume');
+
+    $blogBtn.on('click', function(ev) {
+        ev.preventDefault();
+        sendGAClickForLabel('blog clicked', function() {
+            location.href = '/blog/';
+        });
+    });
+    $resumeBtn.on('click', function(ev) {
+        ev.preventDefault();
+        sendGAClickForLabel('resume clicked', function() {
+            location.href = '/files/resume.pdf';
+        });
+    });
+};
+
+$(document).ready(function() {
+    initScrollReveal();
+    initSmoothScrolling();
+    initGATracking();
 });
-
-$(window).resize(onResize);
-

@@ -144,7 +144,7 @@ gulp.task("js", function(callback) {
         ]
 
     }, function(err, stats) {
-        if(err) throw new gutil.PluginError("webpack", err);
+        if(err) { throw new gutil.PluginError("webpack", err); }
         gutil.log("[webpack]", stats.toString({
             // output options
         }));
@@ -159,7 +159,7 @@ gulp.task("js", function(callback) {
 gulp.task('watch:less', function() {
     'use strict';
 
-    gulp.watch(['./modules/**/*.less', './freemium/**/*.less', '../packages/**/*.less'], ['less']);
+    gulp.watch(['./less/*.less'], ['less']);
     return true;
 });
 
@@ -170,7 +170,7 @@ gulp.task('watch:less', function() {
 gulp.task('watch:js', function() {
     'use strict';
 
-    gulp.watch(['./modules/**/*.js', './freemium/**/*.js', '../packages/**/*.js', '!**/_dist/js/**/*.js'], ['js']);
+    gulp.watch(['./js/*.js'], ['js']);
     return true;
 });
 

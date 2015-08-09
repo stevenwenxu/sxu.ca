@@ -7,7 +7,7 @@ html
         link(rel='stylesheet', href='/dist/css/style.css')
         style.
             [data-sr] { visibility: hidden; }
-    body
+    body(data-spy='scroll', data-target='#main-nav')
         block content
             block navbar
             block jumbotron
