@@ -1,0 +1,421 @@
+extends layout
+
+block navbar
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container-fluid
+
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-nav')
+                    span.sr-only Toggle navigation
+                    // hamburger button
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#top') Home
+
+            #main-nav.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/blog') Blog
+                    li
+                        a(href='/files/resume.pdf') Resume
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='#profile') Profile
+                    li
+                        a(href='#experiences') Experiences
+                    li
+                        a(href='#abilities') Abilities
+                    li
+                        a(href='#interests') Interests
+                    li
+                        a(href='#contact') Contact
+    
+block jumbotron
+    section#top.jumbotron
+        .container
+            h1 Steven Xu
+            p.sub personal website
+        .layer
+
+block profile
+    section.background-white
+        section#profile.container(data-sr='')
+            h2 Profile
+            p.sub I'm a passionate developer.
+            hr
+            .row
+                .col-md-4
+                    h3 About me
+                    p
+                        | I am a 2B Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
+                .col-md-4.text-center
+                    img#me(src='dist/img/steven.png', alt='Steven Xu')
+                .col-md-4
+                    h3 Details
+                    p 
+                        strong Name:
+                    p Wen (Steven) Xu
+                    p
+                        strong Age:
+                    p 20
+                    p
+                        strong Location:
+                    p Waterloo, Ontario, Canada
+
+block experiences
+    section.background-blue
+        #experiences.container
+            h2 Experiences
+            p.sub The only source of knowledge is experience.
+            hr
+            section
+                h3 Education
+                .experiences
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 University of Waterloo
+                            p.experience-period Sep 2013 - present
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Waterloo, Ontario, Canada
+                        .col-md-8
+                            p
+                                strong Candidate for Bachelor of Computer Science
+                            p
+                                | In the first two years, I learned and practiced functional, imperative and object oriented programming techniques. I learned about data structures including stack, queue, linked lists, trees and graphs. In the OOP class, I had experience with design patterns such as Singleton, Factory, Decorator, Observer etc.
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 National Institute of Technology
+                            p.experience-period Sep 2010 - Nov 2012
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Beijing, China
+                        .col-md-8
+                            p
+                                strong High school - Science
+                            p
+                                | High school is where I enjoyed doing science and math. I realized in year 11 that I wanted to become a developer, and so I started to make small C programs.
+            hr
+            section
+                h3 Careers
+                .experiences
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Hootsuite Media Inc.
+                            p.experience-period | May 2015 - Aug 2015
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Vancouver, British Columbia, Canada
+                        .col-md-8
+                            p
+                                strong Javascript Software Engineer, Coop
+                            p
+                                | ... To Be Updated
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Ontario Institute of Cancer Research
+                            p.experience-period Aug 2014 - Dec 2014
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Toronto, Ontario, Canada
+                        .col-md-8
+                            p
+                                strong Web Developer and Themer
+                            p
+                                | I had wonderful experience working with the webdev team at OICR. I explored various technologies and developed prototypes of web apps and services. With a team member, our "WEB SSH" tool won the best CLIC day project award. I was also responsible for the technical parts of new employee training sessions. My presentation on HTML5 was considered "cool and resourceful". a(href='/blog/coop/2015/01/19/web-developer-at-oicr.html') Read more
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 EnglishFirst
+                            p.experience-period May 2013 - June 2013
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Beijing, China
+                        .col-md-8
+                            p
+                                strong Teaching Assistant
+                            p
+                                | As a career starter, I really enjoyed working at English First. My primary task was offering K-12 students personalized English lessons with focus on listening and writing skills, as well as assisting senior teachers in class (preparing materials, making demos, correcting homework and exam papers, etc). My communication skills and time management skills were greatly improved.
+            hr
+            section
+                h3 Projects
+                .experiences
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Pitch Perfect
+                            p.experience-period May 2015
+                            span.experience-details
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/Steven-xu94/PitchPerfect-Udacity', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong Swift, Xcode
+                            p
+                                | My first iOS App! This is a project from Udacity: Intro to iOS App Development with Swift. Swift is such a wonderful language and I am totally in love with it. I am desperate to finish reading <em>The Swift Programming Language</em> and this is a starting point for me to try iOS dev.
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Personal Website
+                            p.experience-period Oct 2014
+                            span.experience-details
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/steven-xu94/steven-xu94.github.io', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong HTML5, jQuery, CSS, Bootstrap
+                            p
+                                | This website, along with the blog, is running on Heroku. Other technologies involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="/blog">Blog</a> is powered by Jekyll.
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 JS Based Calculator
+                            p.experience-period Oct 2014
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-link
+                                    a(href='http://www.sxu.ca/JS-based-calculator', target='_blank') Visit
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/steven-xu94/JS-based-calculator', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong Javascript, HTML, CSS
+                            p
+                                | This calculator was an exercise on Javascript. Challenges: front-end design implementation (OSX Yosemite theme), Javascript input processing, etc.
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Web SSH
+                            p.experience-period Oct 2014
+                            span.experience-details
+                        .col-md-8
+                            p
+                                strong PHP, jQuery, Ajax, CSS, HTML
+                            p 
+                                | This was the CLIC day project at OICR. I worked on the backend, investigating and utilizing the PHP SSH2 module. I also learned about Ajax, PHP form handling, and the importance of version control in teamwork. 
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Home Page
+                            p.experience-period March - May 2014
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-link
+                                    a(href='http://stevenuw2013.appspot.com', target='_blank') Visit
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/Steven-xu94/blogapp', target='_blank') Source Code
+                        .col-md-8
+                            p
+                              strong Python, Google App Engine, HTML
+                            p
+                                | This was my work for an Udacity Web Development course. The app uses Python to power the backends, as well as using GQL (a SQL-like database from Google) to run a hand-coded blog app.
+
+block abilities
+    - var star = function(num) {
+    -   for(var i = 0; i < num; i++) {
+        span.glyphicon.glyphicon-star
+    -   }
+    -   for(var j = 0; j < 5-num; j++) {
+        span.glyphicon.glyphicon-star-empty
+    -   }
+    - }
+
+    section.background-white
+        #abilities.container
+            h2 Abilities
+            p.sub Practice makes perfect.
+            hr
+            section
+                h3(data-sr='enter left') Skills
+                .row
+                    .col-md-6(data-sr='enter left')
+                        ul.no-bullets
+                            li
+                                span.ability-title HTML
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title CSS
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title jQuery
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Javascript
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title CasperJS
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title PHP
+                                span.ability-score #{star(2)}
+                            li
+                                span.ability-title MySQL
+                                span.ability-score #{star(2)}
+                            li
+                                span.ability-title Bootstrap
+                                span.ability-score #{star(2)}
+                    .col-md-6(data-sr='enter right')
+                        ul.no-bullets
+                            li
+                                span.ability-title Bash scripting
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Scheme
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title C/C++
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Java
+                                span.ability-score #{star(2)}
+                            li
+                                span.ability-title Python
+                                span.ability-score #{star(2)}
+                            li
+                                span.ability-title Latex
+                                span.ability-score #{star(2)}
+            hr
+            section
+                h3(data-sr='enter left') Tools
+                .row
+                    .col-md-6(data-sr='enter left')
+                        ul.no-bullets
+                            li
+                                span.ability-title LAMP Stack
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Vagrant
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Atlassian Confluence/Jira
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Drupal
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title phpMyAdmin
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Jenkins
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Apache Ant
+                                span.ability-score #{star(3)}
+                    .col-md-6(data-sr='enter right')
+                        ul.no-bullets
+                            li
+                                span.ability-title Mac
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Linux
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Windows
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Sublime Text
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title Vim
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title SSH
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Subversion
+                                span.ability-score #{star(3)}
+                            li
+                                span.ability-title Git
+                                span.ability-score #{star(3)}
+            hr
+            section
+                h3(data-sr='enter left') Languages
+                .row
+                    .col-md-6(data-sr='enter left')
+                        ul.no-bullets
+                            li
+                                span.ability-title Mandarin Chinese
+                                span.ability-score #{star(4)}
+                            li
+                                span.ability-title English
+                                span.ability-score #{star(4)}
+                    .col-md-6(data-sr='enter right')
+                        ul.no-bullets
+                            li
+                                span.ability-title German
+                                span.ability-score #{star(2)}
+
+block interests 
+    section.background-blue
+        #interests.container
+            h2 Interests
+            p.sub Passion is energy.
+            hr
+            section(data-sr='enter left')
+                .row
+                    .col-md-4.left
+                        img(src='dist/img/coding.png', alt='Coding challenges', width='220', height='220')
+                    .col-md-8.interest-content
+                        h3 Coding Challenges
+                        p
+                            | I love all kinds of coding challenges, and I can pick up technologies really quickly. I never give up without a fight, and the satisfaction I get from solving a challenge can really make my day.
+            section(data-sr='enter right')
+                .row
+                    .col-md-4.right
+                        img(src='dist/img/piano.png', alt='Piano', width='220', height='220')
+                    .col-md-8.interest-content
+                        h3 Piano
+                        p
+                            | I started playing piano at the age of 6. Spending several hours on a piano is always a huge treat for me to relax. Sometimes I improvise stuff, and create my own piano accompanies for pop songs.
+            section(data-sr='enter left')
+                .row
+                    .col-md-4.left
+                        img(src='dist/img/ping.png', alt='Sports', width='220', height='220')
+                    .col-md-8.interest-content
+                        h3 Sports
+                        p
+                            | I enjoy jogging. I jog for about 5km on a regular basis. Besides, I am a huge fan of table tennis.
+            section(data-sr='enter right')
+                .row
+                    .col-md-4.right
+                        img(src='dist/img/duolingo.png', alt='Languages', width='220', height='220')
+                    .col-md-8.interest-content
+                        h3 Languages
+                        p
+                            | I really love learning langauges. In addition to English and Mandarin, I am also able to speak some German. I've been taking German as electives in University, and also challenging myself on Duolingo. My gut feelings for languages always suprise me - I can understant a lot of stuff without vocab support.
+
+block contact
+    section.background-gray
+        #contact.container(data-sr='')
+            h2 Contact
+            hr
+            .row.text-center
+                .contact
+                    a(href='http://ca.linkedin.com/pub/steven-xu/76/263/18b/', target='_blank')
+                        span.fa-stack.fa-2x
+                            i.fa.fa-circle-thin.fa-stack-2x
+                            i.fa.fa-linkedin.fa-stack-1x
+                .contact
+                    a(href='https://github.com/Steven-xu94', target='_blank')
+                        span.fa-stack.fa-2x
+                            i.fa.fa-circle-thin.fa-stack-2x
+                            i.fa.fa-github.fa-stack-1x
+                .contact
+                    a(href='mailto:steven.xu13@gmail.com', target='_blank')
+                        span.fa-stack.fa-2x
+                            i.fa.fa-circle-thin.fa-stack-2x
+                            i.fa.fa-envelope.fa-stack-1x
+                .contact
+                    a(href='http://weibo.com/u/2611917557', target='_blank')
+                        span.fa-stack.fa-2x
+                            i.fa.fa-circle-thin.fa-stack-2x
+                            i.fa.fa-weibo.fa-stack-1x
+
+block credits
+    section.background-gray
+        #credits
+            | Themed by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, Inspired by <a href="http://onepagelove.com" target="_blank">OnePageLove</a> 

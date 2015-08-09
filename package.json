@@ -1,32 +1,34 @@
 {
-  "name": "Website",
-  "version": "1.0.0",
-  "description": "sxu.ca",
-  "main": "index.js",
+  "name": "new-website",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "test"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Steven-xu94/steven-xu94.github.io.git"
-  },
-  "keywords": [
-    "website",
-    "steven"
-  ],
-  "author": "Steven Xu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Steven-xu94/steven-xu94.github.io/issues"
-  },
-  "homepage": "https://github.com/Steven-xu94/steven-xu94.github.io",
   "dependencies": {
-    "bootstrap": "^3.3.4",
-    "express": "^4.12.4",
-    "font-awesome": "^4.3.0",
-    "http": "0.0.0",
-    "isotope-layout": "^2.2.0",
+    "body-parser": "~1.13.2",
+    "bootstrap": "^3.3.5",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "font-awesome": "^4.4.0",
+    "gulp": "^3.9.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-image-optimization": "^0.1.3",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "jade": "~1.11.0",
     "jquery": "^2.1.4",
-    "scrollreveal": "^2.2.0"
+    "morgan": "~1.6.1",
+    "path": "^0.11.14",
+    "scrollreveal": "^2.3.2",
+    "serve-favicon": "~2.3.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.11.0"
   }
 }
