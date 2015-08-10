@@ -1,6 +1,6 @@
 require('bootstrap');
 require('scrollreveal');
-
+window.$ = $;
 var initScrollReveal = function() {
     var config = {
         reset: false,
@@ -47,8 +47,41 @@ var initGATracking = function() {
     });
 };
 
+var handleSubmitFeedback = function() {
+    var $form = $('.feedback-form').find('form'),
+        $name = $form.find('#name'),
+        $email = $form.find('#email'),
+        $message = $form.find('#message');
+
+    $form.on('submit', function(ev) {
+        ev.preventDefault();
+        if ($message.val() === '') {
+            $message.parent().addClass('has-error');
+            return;
+        } else if($name.val() === '') {
+            $name.parent().addClass('has-error');
+            return;
+        }
+        $.ajax({
+            method: 'POST',
+            url: '/feedback',
+            data: {
+                name: $name.val(),
+                email: $email.val(),
+                message: $message.val()
+            },
+            success: function(data) {
+                if (data.success) {
+                    alert('Thanks for your message!');
+                }
+            }
+        });
+    });
+}
+
 $(document).ready(function() {
     initScrollReveal();
     initSmoothScrolling();
     initGATracking();
+    handleSubmitFeedback();
 });

@@ -393,6 +393,20 @@ block contact
         #contact.container(data-sr='')
             h2 Contact
             hr
+            .row.feedback-form
+                form
+                    .form-group
+                        label(for='name') Name
+                        input.form-control#name(type='text', placeholder='John Doe', required=true)
+                    .form-group
+                        label(for='email') Email (Optional)
+                        input.form-control#email(type='email', placeholder='john.doe@example.com')
+                    .form-group
+                        label(for='message') Message
+                        textarea.form-control#message(rows='5', placeholder='Hi Steven, ...', required=true)
+                    .form-group
+                        label
+                        input.form-control.submitFeedback(type='submit')
             .row.text-center
                 .contact
                     a(href='http://ca.linkedin.com/pub/steven-xu/76/263/18b/', target='_blank')
