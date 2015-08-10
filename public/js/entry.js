@@ -89,9 +89,16 @@ var initValidation = function() {
     });
 };
 
+var mobileToggleCollapse = function() {
+    $('.nav a').on('click', function(){
+        $(".navbar-toggle").click();
+    });
+}
+
 $(document).ready(function() {
     initScrollReveal();
     initSmoothScrolling();
+    mobileToggleCollapse();
     initGATracking();
     initValidation();
     handleSubmitFeedback();
