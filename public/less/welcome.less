@@ -103,7 +103,11 @@ hr {
 
 .jumbotron {
     background-attachment: fixed;
+    @media screen and (max-device-width: 1024px) {
+        background-attachment: scroll;
+    }
     background-image: url('../img/background.png');
+    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
