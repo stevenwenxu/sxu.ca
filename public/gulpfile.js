@@ -107,7 +107,8 @@ gulp.task("js", function(callback) {
             alias: {
                 jquery:         config.paths.nodeMods + 'jquery/dist/jquery.min.js',
                 bootstrap:      config.paths.nodeMods + 'bootstrap/dist/js/bootstrap.min.js',
-                scrollreveal:   config.paths.nodeMods + 'scrollreveal/dist/scrollReveal.min.js'
+                scrollreveal:   config.paths.nodeMods + 'scrollreveal/dist/scrollReveal.min.js',
+                'jquery-validation': config.paths.nodeMods + 'jquery-validation/dist/jquery.validate.js'
             }
         },
 

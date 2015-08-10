@@ -397,13 +397,13 @@ block contact
                 form
                     .form-group
                         label(for='name') Name
-                        input.form-control#name(type='text', placeholder='John Doe', required=true)
+                        input.form-control.required#name(type='text', placeholder='John Doe', required=true, name='name')
                     .form-group
                         label(for='email') Email (Optional)
-                        input.form-control#email(type='email', placeholder='john.doe@example.com')
+                        input.form-control.email#email(type='email', placeholder='john.doe@example.com', name='email')
                     .form-group
                         label(for='message') Message
-                        textarea.form-control#message(rows='5', placeholder='Hi Steven, ...', required=true)
+                        textarea.form-control.required#message(rows='5', placeholder='Hi Steven, ...', required=true, name='message')
                     .form-group
                         label
                         input.form-control.submitFeedback(type='submit')

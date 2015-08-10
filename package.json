@@ -25,6 +25,7 @@
     "gulp-watch": "^4.3.4",
     "jade": "~1.11.0",
     "jquery": "^2.1.4",
+    "jquery-validation": "^1.14.0",
     "morgan": "~1.6.1",
     "path": "^0.11.14",
     "scrollreveal": "^2.3.2",

@@ -1,5 +1,7 @@
 require('bootstrap');
 require('scrollreveal');
+require('jquery-validation');
+
 window.$ = $;
 var initScrollReveal = function() {
     var config = {
@@ -48,18 +50,14 @@ var initGATracking = function() {
 };
 
 var handleSubmitFeedback = function() {
-    var $form = $('.feedback-form').find('form'),
+    var $form = $('form'),
         $name = $form.find('#name'),
         $email = $form.find('#email'),
         $message = $form.find('#message');
 
     $form.on('submit', function(ev) {
         ev.preventDefault();
-        if ($message.val() === '') {
-            $message.parent().addClass('has-error');
-            return;
-        } else if($name.val() === '') {
-            $name.parent().addClass('has-error');
+        if (!($form.valid())) {
             return;
         }
         $.ajax({
@@ -77,11 +75,24 @@ var handleSubmitFeedback = function() {
             }
         });
     });
-}
+};
+
+var initValidation = function() {
+    var $form = $('.feedback-form').find('form');
+    $form.validate({
+        highlight: function(elem) {
+            $(elem).parent().addClass('has-error');
+        },
+        unhighlight: function(elem) {
+            $(elem).parent().removeClass('has-error');
+        }
+    });
+};
 
 $(document).ready(function() {
     initScrollReveal();
     initSmoothScrolling();
     initGATracking();
+    initValidation();
     handleSubmitFeedback();
 });
