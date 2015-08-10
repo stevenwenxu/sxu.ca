@@ -10,6 +10,9 @@ body {
 
 h2 {
     font-size: 52px;
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
     text-align: center;
 }
 
@@ -21,6 +24,9 @@ hr {
 
 .sub {
     font-size: 21px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
     color: #727878;
     font-weight: 200;
     text-align: center;
@@ -28,6 +34,9 @@ hr {
 
 .container {
     padding: 40px 100px;
+    @media (max-width: 768px) {
+        padding: 40px;
+    }
 }
 
 .no-bullets {
@@ -177,17 +186,25 @@ hr {
     .left {
         float: left;
         text-align: left;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .right {
         float: right;
         text-align: right;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 }
 
 #contact {
     .feedback-form {
-        width: 70%;
+        @media (min-width: 768px) {
+            width: 70%;
+        }
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 50px;
@@ -199,6 +216,22 @@ hr {
     .contact {
         display: inline-block;
         margin: auto 5%;
+        @media (max-width: 992px) {
+            margin: auto 4%;
+        }
+        @media (max-width: 550px) {
+            margin: auto 3%;
+        }
+        @media (max-width: 479px) {
+            margin: auto 2%;
+        }
+        @media (max-width: 425px) {
+            margin: auto 1%;
+        }
+        @media (max-width: 384px) {
+            margin: auto;
+        }
+        
     }
 
     h2 {
