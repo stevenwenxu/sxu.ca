@@ -1,11 +1,3 @@
-/*
- Hootsuite Campaigns Builder Assets Build System
- Author: Hootsuite Campaigns Dev
- */
-
-//************************************************************************//
-//************************* Load Dependencies ****************************//
-//************************************************************************//
 var gulp                = require('gulp');
 var imageop             = require('gulp-image-optimization');
 var size                = require('gulp-filesize');
@@ -19,20 +11,13 @@ var uglify              = require('gulp-uglify');
 var sourcemaps          = require('gulp-sourcemaps');
 var watch               = require('gulp-watch');
 
-//************************************************************************//
-//****************************** Config **********************************//
-//************************************************************************//
-
 var config = {
     paths: {
         nodeMods: path.join(__dirname, '../node_modules/')
     }
 };
 
-/**
- * Optimize images and copy to relative dist folder
- * @author  James Player <james.player@hootsuite.com>
- */
+
 gulp.task('images', function() {
     'use strict';
 
@@ -54,10 +39,7 @@ gulp.task('images', function() {
     return true;
 });
 
-/**
- * Copy fonts to relative _dist folder
- * @author  James Player <james.player@hootsuite.com>
- */
+
 gulp.task('fonts', function() {
     'use strict';
 
@@ -74,10 +56,7 @@ gulp.task('fonts', function() {
     return true;
 });
 
-/**
- * Compile less into css
- * @author  James Player <james.player@hootsuite.com>
- */
+
 gulp.task('less', function() {
     'use strict';
 
@@ -93,16 +72,11 @@ gulp.task('less', function() {
     return true;
 });
 
-/**
- * Compile our JS
- * @author  James Player <james.player@hootsuite.com>
- */
+
 gulp.task("js", function(callback) {
 
-    // run webpack http://webpack.github.io/docs/tutorials/getting-started/
     webpack({
 
-        // Aliases
         resolve: {
             alias: {
                 jquery:         config.paths.nodeMods + 'jquery/dist/jquery.min.js',
@@ -112,7 +86,6 @@ gulp.task("js", function(callback) {
             }
         },
 
-        // Entry points. Bundles get created based off these files.
         entry: {
 
             // all.bundle.js
@@ -140,7 +113,7 @@ gulp.task("js", function(callback) {
             // Ignore locale
             new webpack.IgnorePlugin(/\.\/locale$/),
 
-            // Uglify (except for ckeditor which is already uglified to save time)
+            // Uglify
             new webpack.optimize.UglifyJsPlugin()
         ]
 
@@ -153,10 +126,7 @@ gulp.task("js", function(callback) {
     });
 });
 
-/**
- * Watcher for changes on less files and runs task
- * @author  James Player
- */
+
 gulp.task('watch:less', function() {
     'use strict';
 
@@ -164,10 +134,7 @@ gulp.task('watch:less', function() {
     return true;
 });
 
-/**
- * Watcher for changes on JS files and runs task
- * @author  James Player
- */
+
 gulp.task('watch:js', function() {
     'use strict';
 
@@ -175,9 +142,7 @@ gulp.task('watch:js', function() {
     return true;
 });
 
-/**
- * Task groups
- */
+
 gulp.task('default',    ['less', 'js']);
 gulp.task('watch',      ['watch:js', 'watch:less']);
-gulp.task('build',      ['less', 'js', 'images']);
+gulp.task('build',      ['less', 'js', 'images', 'font']);
