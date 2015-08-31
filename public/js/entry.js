@@ -93,11 +93,29 @@ var mobileToggleCollapse = function() {
     $('.nav a').on('click', function(){
         $(".navbar-toggle").click();
     });
-}
+};
+
+var initBlinkStar = function() {
+    var $blinks = $('.glyphicon-star-blink');
+    var addStar = function() {
+        setTimeout(function() {
+            $blinks.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+            removeStar($blinks);
+        }, 1000);
+    };
+    var removeStar = function() {
+        setTimeout(function() {
+            $blinks.removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+            addStar();
+        }, 1000);
+    };
+    addStar();
+};
 
 $(document).ready(function() {
     initScrollReveal();
     initSmoothScrolling();
+    initBlinkStar();
     mobileToggleCollapse();
     initGATracking();
     initValidation();

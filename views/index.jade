@@ -48,7 +48,7 @@ block profile
                 .col-md-4
                     h3 About me
                     p
-                        | I am a 2B Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
+                        | I am a 3A Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
                 .col-md-4.text-center
                     img#me(src='dist/img/steven.png', alt='Steven Xu')
                 .col-md-4
@@ -105,16 +105,16 @@ block experiences
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Hootsuite Media Inc.
-                            p.experience-period | May 2015 - Aug 2015
+                            p.experience-period May 2015 - Aug 2015
                             span.experience-details
                                 span.location
                                     i.fa.fa-lg.fa-map-marker
                                     span Vancouver, British Columbia, Canada
                         .col-md-8
                             p
-                                strong Javascript Software Engineer, Coop
+                                strong Coop Software Engineer, JavaScript
                             p
-                                | ... To Be Updated
+                                | I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href='http://code.hootsuite.com/co-ops/steven-xu/'>here</a>.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Ontario Institute of Cancer Research
@@ -147,6 +147,19 @@ block experiences
                 .experiences
                     .experience.row(data-sr='')
                         .col-md-4
+                            h4 Calculator
+                            p.experience-period June 2015 - present
+                            span.experience-details
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/Steven-xu94/Stanford-CS193P-Developing-iOS-8-Apps-with-Swift', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong Swift, Xcode
+                            p
+                                | This is my independent course work for the <em>Stanford Developing iOS 8 Apps with Swift</em> course. I expect to finish the course by the end of December 2015.
+                    .experience.row(data-sr='')
+                        .col-md-4
                             h4 Pitch Perfect
                             p.experience-period May 2015
                             span.experience-details
@@ -157,7 +170,7 @@ block experiences
                             p
                                 strong Swift, Xcode
                             p
-                                | My first iOS App! This is a project from Udacity: Intro to iOS App Development with Swift. Swift is such a wonderful language and I am totally in love with it. I am desperate to finish reading <em>The Swift Programming Language</em> and this is a starting point for me to try iOS dev.
+                                | My first iOS App! This is a project from Udacity: Intro to iOS App Development with Swift. This is a starting point for me to step into iOS dev.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Personal Website
@@ -196,7 +209,7 @@ block experiences
                             p
                                 strong PHP, jQuery, Ajax, CSS, HTML
                             p 
-                                | This was the CLIC day project at OICR. I worked on the backend, investigating and utilizing the PHP SSH2 module. I also learned about Ajax, PHP form handling, and the importance of version control in teamwork. 
+                                | This was a "hack" project at OICR. I worked on the backend, investigating and utilizing the PHP SSH2 module. I also learned about Ajax, PHP form handling, and the importance of version control in teamwork. 
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Home Page
@@ -221,54 +234,86 @@ block abilities
             p.sub Practice makes perfect.
             hr
             section
-                h3(data-sr='enter left') Skills
+                h3(data-sr='enter left') iOS
                 .row
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             li
-                                span.ability-title HTML
-                                span.ability-score #{star(4)}
-                            li
-                                span.ability-title CSS
-                                span.ability-score #{star(4)}
-                            li
-                                span.ability-title jQuery
-                                span.ability-score #{star(3)}
-                            li
-                                span.ability-title Javascript
-                                span.ability-score #{star(3)}
-                            li
-                                span.ability-title CasperJS
-                                span.ability-score #{star(3)}
-                            li
-                                span.ability-title PHP
-                                span.ability-score #{star(2)}
-                            li
-                                span.ability-title MySQL
-                                span.ability-score #{star(2)}
-                            li
-                                span.ability-title Bootstrap
-                                span.ability-score #{star(2)}
+                                span.ability-title Xcode
+                                span.ability-score 
+                                    +blinkStar(2)
+
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
-                                span.ability-title Bash scripting
-                                span.ability-score #{star(4)}
+                                span.ability-title Swift
+                                span.ability-score 
+                                    +blinkStar(1)
+            hr
+            section
+                h3(data-sr='enter left') Web
+                .row
+                    .col-md-6(data-sr='enter left')
+                        ul.no-bullets
                             li
-                                span.ability-title Scheme
-                                span.ability-score #{star(4)}
+                                span.ability-title HTML / CSS / JavaScript
+                                span.ability-score 
+                                    +star(4)
                             li
-                                span.ability-title C/C++
-                                span.ability-score #{star(3)}
+                                span.ability-title jQuery
+                                span.ability-score 
+                                    +star(4)
                             li
-                                span.ability-title Java
-                                span.ability-score #{star(2)}
+                                span.ability-title Bootstrap
+                                span.ability-score 
+                                    +star(3)
                             li
-                                span.ability-title Python
-                                span.ability-score #{star(2)}
+                                span.ability-title LESS
+                                span.ability-score 
+                                    +star(3)
                             li
-                                span.ability-title Latex
-                                span.ability-score #{star(2)}
+                                span.ability-title Responsive Design
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title PHP / Laravel
+                                span.ability-score 
+                                    +star(2)
+                            li
+                                span.ability-title Node.js / Express.js
+                                span.ability-score 
+                                    +star(2)
+
+                    .col-md-6(data-sr='enter right')
+                        ul.no-bullets
+                            li
+                                span.ability-title Gulp
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title Webpack
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title Heroku
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title CasperJS
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title Drupal
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title Google Analytics
+                                span.ability-score 
+                                    +star(3)
+                            li
+                                span.ability-title Jasmine
+                                span.ability-score 
+                                    +star(3)
             hr
             section
                 h3(data-sr='enter left') Tools
@@ -276,52 +321,47 @@ block abilities
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             li
-                                span.ability-title LAMP Stack
-                                span.ability-score #{star(4)}
-                            li
                                 span.ability-title Vagrant
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(4)
                             li
                                 span.ability-title Atlassian Confluence/Jira
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(4)
                             li
-                                span.ability-title Drupal
-                                span.ability-score #{star(3)}
-                            li
-                                span.ability-title phpMyAdmin
-                                span.ability-score #{star(3)}
+                                span.ability-title Sequel Pro / phpMyAdmin
+                                span.ability-score 
+                                    +star(3)
                             li
                                 span.ability-title Jenkins
-                                span.ability-score #{star(3)}
+                                span.ability-score 
+                                    +star(3)
                             li
-                                span.ability-title Apache Ant
-                                span.ability-score #{star(3)}
+                                span.ability-title Git
+                                span.ability-score 
+                                    +star(3)
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
                                 span.ability-title Mac
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(5)
                             li
                                 span.ability-title Linux
-                                span.ability-score #{star(4)}
-                            li
-                                span.ability-title Windows
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(4)
                             li
                                 span.ability-title Sublime Text
-                                span.ability-score #{star(4)}
-                            li
-                                span.ability-title Vim
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(4)
                             li
                                 span.ability-title SSH
-                                span.ability-score #{star(3)}
+                                span.ability-score 
+                                    +star(4)
                             li
-                                span.ability-title Subversion
-                                span.ability-score #{star(3)}
-                            li
-                                span.ability-title Git
-                                span.ability-score #{star(3)}
+                                span.ability-title Vim
+                                span.ability-score 
+                                    +star(3)                           
             hr
             section
                 h3(data-sr='enter left') Languages
@@ -330,15 +370,18 @@ block abilities
                         ul.no-bullets
                             li
                                 span.ability-title Mandarin Chinese
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(5)
                             li
                                 span.ability-title English
-                                span.ability-score #{star(4)}
+                                span.ability-score 
+                                    +star(5)
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
                                 span.ability-title German
-                                span.ability-score #{star(2)}
+                                span.ability-score 
+                                    +blinkStar(2)
 
 block interests 
     section.background-blue

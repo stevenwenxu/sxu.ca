@@ -1,6 +1,19 @@
-- function star(num) {
--   for(var i = 0; i < num; i++)
-    span.glyphicon.glyphicon-star
--   for(var j = 0; j < 5 - num; j++)
-    span.glyphicon.glyphicon-star-empty
-- }
+mixin star(num)
+    - var total = 5, start = 0;
+    while start < num
+        span.glyphicon.glyphicon-star
+        - start++
+    while start < total
+        span.glyphicon.glyphicon-star-empty
+        - start++
+
+mixin blinkStar(num)
+    - var total = 5, start = 0;
+    while start < num
+        span.glyphicon.glyphicon-star
+        - start++
+    span.glyphicon.glyphicon-star-empty.glyphicon-star-blink
+    - start++
+    while start < total
+        span.glyphicon.glyphicon-star-empty
+        - start++
