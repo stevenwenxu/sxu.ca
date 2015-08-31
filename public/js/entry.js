@@ -2,7 +2,6 @@ require('bootstrap');
 require('scrollreveal');
 require('jquery-validation');
 
-window.$ = $;
 var initScrollReveal = function() {
     var config = {
         reset: false,
