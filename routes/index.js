@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/blog', function(req, res, next) {
-    res.redirect('http://steven-xu94.github.io/blog');
+    res.redirect('//blog.sxu.ca');
 });
 
 router.post('/feedback', function(req, res) {
