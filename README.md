@@ -1,4 +1,6 @@
 # sxu.ca
+[![Build Status](https://travis-ci.org/Steven-xu94/sxu.ca.svg?branch=master)](https://travis-ci.org/Steven-xu94/sxu.ca)
+
 My personal homepage
 
 This is a website running on Heroku with [Express.js](http://expressjs.com/) framework.
