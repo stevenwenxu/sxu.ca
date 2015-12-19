@@ -52,11 +52,16 @@ var handleSubmitFeedback = function() {
     var $form = $('form'),
         $name = $form.find('#name'),
         $email = $form.find('#email'),
-        $message = $form.find('#message');
+        $message = $form.find('#message'),
+        captcha = '';
 
     $form.on('submit', function(ev) {
         ev.preventDefault();
+        captcha = grecaptcha.getResponse();
         if (!($form.valid())) {
+            return;
+        } else if (captcha.length === 0) {
+            alert('Please verify that you are not a bot.');
             return;
         }
         $.ajax({
@@ -65,7 +70,8 @@ var handleSubmitFeedback = function() {
             data: {
                 name: $name.val(),
                 email: $email.val(),
-                message: $message.val()
+                message: $message.val(),
+                recaptcha: captcha
             },
             success: function(data) {
                 if (data.success) {
@@ -99,7 +105,7 @@ var initBlinkStar = function() {
     var addStar = function() {
         setTimeout(function() {
             $blinks.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
-            removeStar($blinks);
+            removeStar();
         }, 1000);
     };
     var removeStar = function() {
