@@ -76,7 +76,8 @@ var addToSpreadSheet = function(name, email, msg, res) {
             }
             next = info.nextRow;
             var json = {};
-            json[next] = { 1: name, 2: email, 3: msg };
+            var currTime = new Date().toGMTString();
+            json[next] = { 1: currTime, 2: name, 3: email, 4: msg };
             sheet.add(json);
             sheet.send(function(err) { 
                 if(err) {
