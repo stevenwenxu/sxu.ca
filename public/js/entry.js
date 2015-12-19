@@ -76,6 +76,7 @@ var handleSubmitFeedback = function() {
             success: function(data) {
                 if (data.success) {
                     alert('Thanks for your message!');
+                    grecaptcha.reset();
                 }
             }
         });

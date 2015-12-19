@@ -49,9 +49,9 @@ router.post('/feedback', function(req, res) {
             if (result.success) {
                 addToSpreadSheet(req.body.name, req.body.email, req.body.message, res);
             } else {
-                httpsres.json({
+                res.json({
                     success: false,
-                    message: result["error-codes"]
+                    message: result
                 });
             }
         });
@@ -61,7 +61,6 @@ router.post('/feedback', function(req, res) {
 });
 
 var addToSpreadSheet = function(name, email, msg, res) {
-    console.log(name, email, msg);
     spreadsheet.load({
         spreadsheetId: config.spreadsheetId,
         worksheetId: config.worksheetId,
