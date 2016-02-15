@@ -1,5 +1,5 @@
 # sxu.ca
-[![Build Status](https://travis-ci.org/Steven-xu94/sxu.ca.svg?branch=master)](https://travis-ci.org/Steven-xu94/sxu.ca)
+[![Build Status](https://travis-ci.org/stevenwenxu/sxu.ca.svg?branch=master)](https://travis-ci.org/stevenwenxu/sxu.ca)
 
 My personal homepage
 
