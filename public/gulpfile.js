@@ -3,7 +3,7 @@ var imageop             = require('gulp-image-optimization');
 var size                = require('gulp-filesize');
 var rename              = require('gulp-rename');
 var less                = require('gulp-less');
-var cssmin              = require('gulp-minify-css');
+var cleanCSS            = require('gulp-clean-css');
 var gutil               = require('gulp-util');
 var webpack             = require('webpack');
 var path                = require('path');
@@ -66,7 +66,7 @@ gulp.task('less', function() {
     ])
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(cssmin())
+        .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/css'));
 
