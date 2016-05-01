@@ -32,11 +32,32 @@ block navbar
                         a(href='#contact') Contact
     
 block jumbotron
-    section#top.jumbotron
+    section#top.jumbotron.carousel.slide(data-ride='carousel')
         .container
             h1 Steven Xu
             p.sub personal website
         .layer
+
+        ol.carousel-indicators
+            li.active(data-target='#top', data-slide-to='0')
+            li(data-target='#top', data-slide-to='1')
+            li(data-target='#top', data-slide-to='2')
+            li(data-target='#top', data-slide-to='3')
+        .carousel-inner(role='listbox')
+            .item.active
+                img(src='/dist/img/beihai.png', alt="Beihai park")
+            .item
+                img(src='/dist/img/waterloomarathon1.jpg', alt="Waterloo Marathon 1")
+            .item
+                img(src='/dist/img/waterloomarathon2.jpg', alt="Waterloo Marathon 2")
+            .item
+                img(src='/dist/img/waterloohacks.jpeg', alt="Waterloo Hacks 2016")
+        a.left.carousel-control(href='#top', role='button', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left(aria-hidden=true)
+            span.sr-only Previous
+        a.right.carousel-control(href='#top', role='button', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right(aria-hidden=true)
+            span.sr-only Next
 
 block profile
     section.background-white
