@@ -33,6 +33,7 @@
     "morgan": "~1.6.1",
     "path": "^0.11.14",
     "pug": "^2.0.0-alpha6",
+    "scrollreveal": "^2.3.3",
     "serve-favicon": "~2.3.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.11.0"
