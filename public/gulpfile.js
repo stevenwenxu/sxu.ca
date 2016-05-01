@@ -3,7 +3,7 @@ var imageop             = require('gulp-image-optimization');
 var size                = require('gulp-filesize');
 var rename              = require('gulp-rename');
 var less                = require('gulp-less');
-var cssmin              = require('gulp-minify-css');
+var cleanCSS            = require('gulp-clean-css');
 var gutil               = require('gulp-util');
 var webpack             = require('webpack');
 var path                = require('path');
@@ -13,8 +13,7 @@ var watch               = require('gulp-watch');
 
 var config = {
     paths: {
-        nodeMods: path.join(__dirname, '../node_modules/'),
-        externMods: path.join(__dirname, '../extern_modules/')
+        nodeMods: path.join(__dirname, '../node_modules/')
     }
 };
 
@@ -66,7 +65,7 @@ gulp.task('less', function() {
     ])
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(cssmin())
+        .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/css'));
 
@@ -80,16 +79,14 @@ gulp.task("js", function(callback) {
 
         resolve: {
             alias: {
-                jquery:         config.paths.nodeMods + 'jquery/dist/jquery.min.js',
-                bootstrap:      config.paths.nodeMods + 'bootstrap/dist/js/bootstrap.min.js',
-                'jquery-validation': config.paths.nodeMods + 'jquery-validation/dist/jquery.validate.js',
-
-                scrollreveal:   config.paths.externMods + 'scrollreveal/dist/scrollReveal.min.js',
+                jquery:           config.paths.nodeMods + 'jquery/dist/jquery.min.js',
+                bootstrap:        config.paths.nodeMods + 'bootstrap/dist/js/bootstrap.min.js',
+                jqueryValidation: config.paths.nodeMods + 'jquery-validation/dist/jquery.validate.js',
+                scrollreveal:     config.paths.nodeMods + 'scrollreveal/dist/scrollReveal.min.js',
             }
         },
 
         entry: {
-
             // all.bundle.js
             all: "./js/entry.js",
         },

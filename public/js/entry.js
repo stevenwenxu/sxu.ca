@@ -1,6 +1,6 @@
 require('bootstrap');
 require('scrollreveal');
-require('jquery-validation');
+require('jqueryValidation');
 
 var initScrollReveal = function() {
     var config = {
