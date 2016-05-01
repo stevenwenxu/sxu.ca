@@ -106,6 +106,10 @@ hr {
     margin-bottom: 0;
     padding: 0 !important;
 
+    @media (max-width: 768px) {
+        margin-top: 51px; // move carousel below nav
+    }
+
     .layer {
         background-color: black;
         position: absolute;
@@ -130,14 +134,36 @@ hr {
         }
 
         h1 {
-            padding-bottom: 20px;
-            border-bottom: 1px solid #FFFFFF;
-            border-bottom-color: rgba(255,255,255,0.35);
             display: inline-block;
         }
 
+        .separator {
+            position: relative;
+            padding-top: 20px;
+            margin-bottom: 20px;
+            &:after {
+                content:"";
+                background: rgba(255,255,255,0.35);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                width: 300px;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
         .sub {
+            // border-top: 1px solid #FFFFFF;
+            // border-top-color: rgba(255,255,255,0.35);
             font-size: 28px;
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
@@ -159,6 +185,11 @@ hr {
         &.active {
             margin: 0px 5px;
         }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
     }
 }
 
