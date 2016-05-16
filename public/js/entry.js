@@ -97,7 +97,10 @@ var initValidation = function() {
 
 var mobileToggleCollapse = function() {
     $('.nav a').on('click', function(){
-        $(".navbar-toggle").click();
+        var $toggle = $('.navbar-toggle');
+        if ($toggle.is(':visible')) {
+            $(".navbar-toggle").click();
+        }
     });
 };
 
