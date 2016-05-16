@@ -30,7 +30,7 @@ block navbar
                         a(href='#interests') Interests
                     li
                         a(href='#contact') Contact
-    
+
 block jumbotron
     section#top.jumbotron.carousel.slide(data-ride='carousel', data-pause='')
         .container
@@ -70,17 +70,17 @@ block profile
                 .col-md-4
                     h3 About me
                     p
-                        | I am a 3A Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
+                        | I am a 3B Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
                 .col-md-4.text-center
                     img#me(src='dist/img/steven.png', alt='Steven Xu')
                 .col-md-4
                     h3 Details
-                    p 
+                    p
                         strong Name:
                     p Wen (Steven) Xu
                     p
                         strong Age:
-                    p 20
+                    p 21
                     p
                         strong Location:
                     p Waterloo, Ontario, Canada
@@ -126,6 +126,20 @@ block experiences
                 .experiences
                     .experience.row(data-sr='')
                         .col-md-4
+                            h4 WeMesh Inc.
+                            p.experience-period Jan 2016 - Apr 2015
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Kitchener, Ontario, Canada
+                        .col-md-8
+                            p
+                                strong Software Engineering, iOS
+                            p
+                                | Working at WeMesh, a startup company, is quite different from previous experiences. As a member of the iOS team, I touched every corner of the code base - from UI to new API integration, from major code refactor to localization and right-to-left support. WeMesh made me a fan of working in startup companies.
+                .experiences
+                    .experience.row(data-sr='')
+                        .col-md-4
                             h4 Hootsuite Media Inc.
                             p.experience-period May 2015 - Aug 2015
                             span.experience-details
@@ -134,7 +148,7 @@ block experiences
                                     span Vancouver, British Columbia, Canada
                         .col-md-8
                             p
-                                strong Coop Software Engineer, JavaScript
+                                strong Software Engineering, JavaScript
                             p
                                 | I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href='http://code.hootsuite.com/co-ops/steven-xu/'>here</a>.
                     .experience.row(data-sr='')
@@ -169,17 +183,30 @@ block experiences
                 .experiences
                     .experience.row(data-sr='')
                         .col-md-4
-                            h4 Psychologist, Calculator, and more
-                            p.experience-period June 2015 - present
+                            h4 On The Map
+                            p.experience-period Mar 2016
                             span.experience-details
                                 span.github
                                     i.fa.fa-lg.fa-github
-                                    a(href='https://github.com/stevenwenxu/Stanford-CS193P-Developing-iOS-8-Apps-with-Swift', target='_blank') Source Code
+                                    a(href='https://github.com/stevenwenxu/On-The-Map-Udacity', target='_blank') Source Code
                         .col-md-8
                             p
-                                strong Swift, Xcode
+                                strong Swift, Parse, Facebook SDK
                             p
-                                | These are my independent course work for the <em>Stanford Developing iOS 8 Apps with Swift</em> course. I expect to finish the course by the end of December 2015.
+                                | Post your name, location and portfolio url, and see all other Udacity students on the map from around the world!
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Meme Me
+                            p.experience-period Feb 2016
+                            span.experience-details
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/stevenwenxu/Udacity-UIKit---Meme', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong Swift
+                            p
+                                | Take a photo or choose one from gallary, and turn it into a meme picture. View your collections of memes and share with friends.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Pitch Perfect
@@ -206,48 +233,6 @@ block experiences
                                 strong HTML5, jQuery, CSS, Bootstrap
                             p
                                 | This website is running on Heroku with NodeJS. Some front-end packages involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="//blog.sxu.ca">Blog</a> is powered by Jekyll.
-                    .experience.row(data-sr='')
-                        .col-md-4
-                            h4 JS Based Calculator
-                            p.experience-period Oct 2014
-                            span.experience-details
-                                span.location
-                                    i.fa.fa-lg.fa-link
-                                    a(href='http://www.sxu.ca/JS-based-calculator', target='_blank') Visit
-                                span.github
-                                    i.fa.fa-lg.fa-github
-                                    a(href='https://github.com/stevenwenxu/JS-based-calculator', target='_blank') Source Code
-                        .col-md-8
-                            p
-                                strong Javascript, HTML, CSS
-                            p
-                                | This calculator was an exercise on Javascript. Challenges: front-end design implementation (OSX Yosemite theme), Javascript input processing, etc.
-                    .experience.row(data-sr='')
-                        .col-md-4
-                            h4 Web SSH
-                            p.experience-period Oct 2014
-                            span.experience-details
-                        .col-md-8
-                            p
-                                strong PHP, jQuery, Ajax, CSS, HTML
-                            p 
-                                | This was a "hack" project at OICR. I worked on the backend, investigating and utilizing the PHP SSH2 module. I also learned about Ajax, PHP form handling, and the importance of version control in teamwork. 
-                    .experience.row(data-sr='')
-                        .col-md-4
-                            h4 Home Page
-                            p.experience-period March - May 2014
-                            span.experience-details
-                                span.location
-                                    i.fa.fa-lg.fa-link
-                                    a(href='http://stevenuw2013.appspot.com', target='_blank') Visit
-                                span.github
-                                    i.fa.fa-lg.fa-github
-                                    a(href='https://github.com/stevenwenxu/blogapp', target='_blank') Source Code
-                        .col-md-8
-                            p
-                              strong Python, Google App Engine, HTML
-                            p
-                                | This was my work for an Udacity Web Development course. The app uses Python to power the backends, as well as using GQL (a SQL-like database from Google) to run a hand-coded blog app.
 
 block abilities
     section.background-white
@@ -261,16 +246,33 @@ block abilities
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             li
-                                span.ability-title Xcode
-                                span.ability-score 
-                                    +blinkStar(2)
+                                span.ability-title Swift
+                                span.ability-score
+                                    +blinkStar(3)
+                            li
+                                span.ability-title Auto Layout
+                                span.ability-score
+                                    +star(3)
+                            li
+                                span.ability-title Objective C
+                                span.ability-score
+                                    +star(1)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
-                                span.ability-title Swift
-                                span.ability-score 
-                                    +blinkStar(1)
+                                span.ability-title Xcode
+                                span.ability-score
+                                    +star(4)
+                            li
+                                span.ability-title CocoaPods
+                                span.ability-score
+                                    +star(4)
+                            li
+                                span.ability-title Instruments
+                                span.ability-score
+                                    +star(2)
+
             hr
             section
                 h3(data-sr='enter left') Web
@@ -278,64 +280,57 @@ block abilities
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             li
-                                span.ability-title HTML / CSS / JavaScript
-                                span.ability-score 
-                                    +star(4)
-                            li
-                                span.ability-title jQuery
-                                span.ability-score 
+                                span.ability-title HTML / CSS / JavaScript / jQuery
+                                span.ability-score
                                     +star(4)
                             li
                                 span.ability-title Bootstrap
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title LESS
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title Responsive Design
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title PHP / Laravel
-                                span.ability-score 
+                                span.ability-score
                                     +star(2)
                             li
                                 span.ability-title Node.js / Express.js
-                                span.ability-score 
+                                span.ability-score
                                     +star(2)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
+                                span.ability-title Heroku / AWS EC2 / Digital Ocean
+                                span.ability-score
+                                    +star(4)
+                            li
                                 span.ability-title Gulp
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title Webpack
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
-                                span.ability-title Heroku
-                                span.ability-score 
-                                    +star(3)
-                            li
-                                span.ability-title CasperJS
-                                span.ability-score 
+                                span.ability-title CasperJS / Jasmine
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title Drupal
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                             li
                                 span.ability-title Google Analytics
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
-                            li
-                                span.ability-title Jasmine
-                                span.ability-score 
-                                    +star(3)
+
             hr
             section
                 h3(data-sr='enter left') Tools
@@ -343,47 +338,28 @@ block abilities
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             li
+                                span.ability-title Git
+                                span.ability-score
+                                    +star(4)
+                            li
                                 span.ability-title Vagrant
-                                span.ability-score 
+                                span.ability-score
                                     +star(4)
-                            li
-                                span.ability-title Atlassian Confluence/Jira
-                                span.ability-score 
-                                    +star(4)
-                            li
-                                span.ability-title Sequel Pro / phpMyAdmin
-                                span.ability-score 
-                                    +star(3)
                             li
                                 span.ability-title Jenkins
-                                span.ability-score 
-                                    +star(3)
-                            li
-                                span.ability-title Git
-                                span.ability-score 
+                                span.ability-score
                                     +star(3)
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
-                                span.ability-title Mac
-                                span.ability-score 
-                                    +star(5)
-                            li
-                                span.ability-title Linux
-                                span.ability-score 
+                                span.ability-title Confluence / Jira
+                                span.ability-score
                                     +star(4)
                             li
-                                span.ability-title Sublime Text
-                                span.ability-score 
-                                    +star(4)
-                            li
-                                span.ability-title SSH
-                                span.ability-score 
-                                    +star(4)
-                            li
-                                span.ability-title Vim
-                                span.ability-score 
-                                    +star(3)                           
+                                span.ability-title Sequel Pro / phpMyAdmin
+                                span.ability-score
+                                    +star(3)
+
             hr
             section
                 h3(data-sr='enter left') Languages
@@ -392,20 +368,20 @@ block abilities
                         ul.no-bullets
                             li
                                 span.ability-title Mandarin Chinese
-                                span.ability-score 
+                                span.ability-score
                                     +star(5)
                             li
                                 span.ability-title English
-                                span.ability-score 
+                                span.ability-score
                                     +star(5)
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
                                 span.ability-title German
-                                span.ability-score 
+                                span.ability-score
                                     +blinkStar(2)
 
-block interests 
+block interests
     section.background-blue
         #interests.container
             h2 Interests
@@ -414,27 +390,27 @@ block interests
             section(data-sr='enter left')
                 .row
                     .col-md-4.left
-                        img(src='dist/img/coding.png', alt='Coding challenges', width='220', height='220')
-                    .col-md-8.interest-content
-                        h3 Coding Challenges
-                        p
-                            | I love all kinds of coding challenges, and I can pick up technologies really quickly. I never give up without a fight, and the satisfaction I get from solving a challenge can really make my day.
-            section(data-sr='enter right')
-                .row
-                    .col-md-4.right
                         img(src='dist/img/piano.png', alt='Piano', width='220', height='220')
                     .col-md-8.interest-content
                         h3 Piano
                         p
                             | I started playing piano at the age of 6. Spending several hours on a piano is always a huge treat for me to relax. Sometimes I improvise stuff, and create my own piano accompanies for pop songs.
+            section(data-sr='enter right')
+                .row
+                    .col-md-4.right
+                        img(src='dist/img/running.png', alt='running', width='220', height='220')
+                    .col-md-8.interest-content
+                        h3 Running
+                        p
+                            | I love running and I run 10k every week. Checkout my experience in running Waterloo Half Marathon 2016!
             section(data-sr='enter left')
                 .row
                     .col-md-4.left
-                        img(src='dist/img/ping.png', alt='Sports', width='220', height='220')
+                        img(src='dist/img/ping.png', alt='Ping Pong', width='220', height='220')
                     .col-md-8.interest-content
-                        h3 Sports
+                        h3 Ping Pong
                         p
-                            | Amateur table tennis player who likes to be challenged. Besides, I enjoy jogging. I jog for about 5km on a regular basis.
+                            | I love to be challenged! I may be an average player but I only get better when you beat me!
             section(data-sr='enter right')
                 .row
                     .col-md-4.right
@@ -442,7 +418,7 @@ block interests
                     .col-md-8.interest-content
                         h3 Languages
                         p
-                            | I really love learning langauges. In addition to English and Mandarin, I am also able to speak some German. I've been taking German as electives in University, and also challenging myself on Duolingo. My gut feelings for languages always suprise me - I can understant a lot of stuff without vocab support.
+                            | I really love learning langauges. In addition to English and Mandarin, I am also able to speak some German. I've been taking a minor in German in University, and also challenging myself on Duolingo. My gut feelings for languages always suprise me - I can understant a lot of stuff without vocab support.
 
 block contact
     section.background-gray
@@ -488,6 +464,11 @@ block contact
                             i.fa.fa-circle-thin.fa-stack-2x
                             i.fa.fa-twitter.fa-stack-1x
                 .contact
+                    a(href='https://instagram.com/__steven_xu__', target='_blank')
+                        span.fa-stack.fa-2x
+                            i.fa.fa-circle-thin.fa-stack-2x
+                            i.fa.fa-instagram.fa-stack-1x
+                .contact
                     a(href='http://weibo.com/u/2611917557', target='_blank')
                         span.fa-stack.fa-2x
                             i.fa.fa-circle-thin.fa-stack-2x
@@ -496,4 +477,4 @@ block contact
 block credits
     section.background-gray
         #credits
-            | Themed by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, Inspired by <a href="http://onepagelove.com" target="_blank">OnePageLove</a> 
+            | Themed by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, Inspired by <a href="http://onepagelove.com" target="_blank">OnePageLove</a>
