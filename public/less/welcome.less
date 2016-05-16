@@ -158,8 +158,6 @@ hr {
         }
 
         .sub {
-            // border-top: 1px solid #FFFFFF;
-            // border-top-color: rgba(255,255,255,0.35);
             font-size: 28px;
             @media (max-width: 768px) {
                 display: none;
@@ -171,8 +169,33 @@ hr {
         max-height: 100vh;
         z-index: 0;
 
-        img {
-            width: 100%;
+        .item {
+            height: 100vh;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 20%;
+            @media (min-width: 768px) {
+                background-attachment: fixed;
+            }
+        }
+
+        .carousel-item-1 {
+            background-image: url('../img/beihai.png');
+        }
+
+        .carousel-item-2 {
+            background-image: url('../img/waterloomarathon1.jpg');
+        }
+
+        .carousel-item-3 {
+            background-image: url('../img/waterloomarathon2.jpg');
+        }
+
+        .carousel-item-4 {
+            background-image: url('../img/waterloohacks.jpeg');
         }
     }
 
@@ -287,7 +310,6 @@ hr {
         @media (max-width: 384px) {
             margin: auto;
         }
-        
     }
 
     h2 {
