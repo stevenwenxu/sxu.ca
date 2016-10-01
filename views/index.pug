@@ -66,7 +66,7 @@ block profile
                 .col-md-4
                     h3 About me
                     p
-                        | I am a 3B Computer Science student from University of Waterloo. I have deep passion in making beautiful products, including websites and software. I love learning new technologies, applying them and extending them. Also I like working in a team, so that I can learn faster and more.
+                        | I am a 4A Computer Science student from University of Waterloo. I am an iOS developer, technology lover, half marathon runner and German learner.
                 .col-md-4.text-center
                     img#me(src='dist/img/steven.png', alt='Steven Xu')
                 .col-md-4
@@ -78,8 +78,8 @@ block profile
                         strong Age:
                     p 21
                     p
-                        strong Location:
-                    p Waterloo, Ontario, Canada
+                        strong Favorite Food:
+                    p Beef noodle soup
 
 block experiences
     section.background-blue
@@ -102,7 +102,7 @@ block experiences
                             p
                                 strong Candidate for Bachelor of Computer Science
                             p
-                                | In the first two years, I learned and practiced functional, imperative and object oriented programming techniques. I learned about data structures including stack, queue, linked lists, trees and graphs. In the OOP class, I had experience with design patterns such as Singleton, Factory, Decorator, Observer etc.
+                                | Going to Waterloo is the most important and successful desicion I have made in my life. Not only have I learned the fundamentals of CS from the best, but crucially I have acquired the spirit of always learning and always pushing myself forward. I enjoy studying and working with people who are more experienced and talented than me, and I strive to be one of them.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 National Institute of Technology
@@ -115,11 +115,24 @@ block experiences
                             p
                                 strong High school - Science
                             p
-                                | High school is where I enjoyed doing science and math. I realized in year 11 that I wanted to become a developer, and so I started to make small C programs.
+                                | High school is where I enjoyed doing science and math. I realized in year 11 that I liked working with computers, so I started to make small C programs.
             hr
             section
                 h3 Careers
                 .experiences
+                    .experience.row(data-sr='')
+                        .col-md-4
+                            h4 Wattpad
+                            p.experience-period Sep 2016 - Dec 2016
+                            span.experience-details
+                                span.location
+                                    i.fa.fa-lg.fa-map-marker
+                                    span Toronto, Ontario, Canada
+                        .col-md-8
+                            p
+                                strong iOS Developer
+                            p
+                                | Currently interning at Wattpad.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 WeMesh Inc.
@@ -132,8 +145,7 @@ block experiences
                             p
                                 strong Software Engineering, iOS
                             p
-                                | Working at WeMesh, a startup company, is quite different from previous experiences. As a member of the iOS team, I touched every corner of the code base - from UI to new API integration, from major code refactor to localization and right-to-left support. WeMesh made me a fan of working in startup companies.
-                .experiences
+                                | WeMesh is a true startup with only 4 full time employees, therefore I have gained quite different experiences. As a member of the iOS team, I touched every corner of the code base - from UI to new API integration, from major code refactor to localization and internationalization. WeMesh made me a fan of working in startup companies.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Hootsuite Media Inc.
@@ -146,7 +158,7 @@ block experiences
                             p
                                 strong Software Engineering, JavaScript
                             p
-                                | I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href='http://code.hootsuite.com/co-ops/steven-xu/'>here</a>.
+                                | I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front-end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href='http://code.hootsuite.com/co-ops/steven-xu/'>here</a>.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Ontario Institute of Cancer Research
@@ -159,7 +171,7 @@ block experiences
                             p
                                 strong Web Developer and Themer
                             p
-                                | At the webdev team at OICR, I explored various technologies and developed prototypes of web apps and services. With a team member, our "WEB SSH" tool won the best CLIC day project award. I was also responsible for the technical parts of new employee training sessions. My presentation on HTML5 was considered "cool and resourceful". <a href='//blog.sxu.ca/coop/2015/01/19/web-developer-at-oicr.html'>Read more</a>
+                                | At the webdev team at OICR, I explored various technologies and developed prototypes of web apps and services. With a team member, our "WEB SSH" tool won the best hack day project. I was also responsible for the technical parts of new employee training sessions. My presentation on HTML5 was considered "cool and resourceful". <a href='//blog.sxu.ca/coop/2015/01/19/web-developer-at-oicr.html'>Read more</a>
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 EnglishFirst
@@ -179,6 +191,21 @@ block experiences
                 .experiences
                     .experience.row(data-sr='')
                         .col-md-4
+                            h4 Eastern T
+                            p.experience-period Sep 2016
+                            span.experience-details
+                                span.github
+                                    i.fa.fa-lg.fa-github
+                                    a(href='https://github.com/stevenwenxu/EasternT', target='_blank') Source Code
+                        .col-md-8
+                            p
+                                strong Swift, Alamofire, node.js
+                            p
+                                | I made this app with a group of friends during Hack The North 2016. It's a simutaneous interpreting (i.e. real time voice to voice translating) app. We used the new iOS 10 Speech.framework and Microsoft Translate for the basic functions, and a node.js web socket server for always-on cross-device conference call. It's really cool, check it out!
+                            p.project-screenshots
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/KyRCpg-hGoo" frameborder="0" allowfullscreen></iframe>
+                    .experience.row(data-sr='')
+                        .col-md-4
                             h4 On The Map
                             p.experience-period Mar 2016
                             span.experience-details
@@ -191,36 +218,23 @@ block experiences
                             p
                                 | Post your name, location and portfolio url, and see all other Udacity students on the map from around the world!
                             p.project-screenshots
-                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/Login.png' alt='Login screenshot' width=250)
-                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/MapView.png' alt='MapView screenshot' width=250)
-                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/TableView.png' alt='TableView screenshot' width=250)
-                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/ShareLink.png' alt='ShareLink screenshot' width=250)
+                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/Login.png' alt='Login screenshot' width=150)
+                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/MapView.png' alt='MapView screenshot' width=150)
+                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/TableView.png' alt='TableView screenshot' width=150)
+                                img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/ShareLink.png' alt='ShareLink screenshot' width=150)
                     .experience.row(data-sr='')
                         .col-md-4
-                            h4 Meme Me
-                            p.experience-period Feb 2016
+                            h4 MyoMuse
+                            p.experience-period Jan 2016
                             span.experience-details
                                 span.github
                                     i.fa.fa-lg.fa-github
-                                    a(href='https://github.com/stevenwenxu/Udacity-UIKit---Meme', target='_blank') Source Code
+                                    a(href='https://github.com/group536', target='_blank') Source Code
                         .col-md-8
                             p
-                                strong Swift
+                                strong Swift, Myo iOS SDK, RxJS
                             p
-                                | Take a photo or choose one from gallary, and turn it into a meme picture. View your collections of memes and share with friends.
-                    .experience.row(data-sr='')
-                        .col-md-4
-                            h4 Pitch Perfect
-                            p.experience-period May 2015
-                            span.experience-details
-                                span.github
-                                    i.fa.fa-lg.fa-github
-                                    a(href='https://github.com/stevenwenxu/PitchPerfect-Udacity', target='_blank') Source Code
-                        .col-md-8
-                            p
-                                strong Swift, Xcode
-                            p
-                                | My first iOS App! This is a project from Udacity: Intro to iOS App Development with Swift. This is a starting point for me to step into iOS dev.
+                                | We won the first place at WaterlooHacks! When you are running with a Myo armband, the app chooses songs in your playlist that match your current running tempo. Your sprinting and jogging experience will never be the same again.
                     .experience.row(data-sr='')
                         .col-md-4
                             h4 Personal Website
@@ -233,7 +247,7 @@ block experiences
                             p
                                 strong HTML5, jQuery, CSS, Bootstrap
                             p
-                                | This website is running on Heroku with NodeJS. Some front-end packages involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="//blog.sxu.ca">Blog</a> is powered by Jekyll.
+                                | This website is running on Heroku with node.js. Some front-end packages involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="//blog.sxu.ca">Blog</a> is powered by Jekyll.
 
 block abilities
     section.background-white
@@ -251,24 +265,24 @@ block abilities
                                 span.ability-score
                                     +blinkStar(3)
                             li
-                                span.ability-title Auto Layout
+                                span.ability-title Objective C
                                 span.ability-score
                                     +star(3)
                             li
-                                span.ability-title Objective C
+                                span.ability-title AFNetworking / Alamofire
                                 span.ability-score
-                                    +star(1)
+                                    +star(3)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
                             li
-                                span.ability-title Xcode
+                                span.ability-title Audo Layout / Manual Layout
                                 span.ability-score
-                                    +star(4)
+                                    +star(3)
                             li
-                                span.ability-title CocoaPods
+                                span.ability-title Core Data
                                 span.ability-score
-                                    +star(4)
+                                    +star(2)
                             li
                                 span.ability-title Instruments
                                 span.ability-score
@@ -289,10 +303,6 @@ block abilities
                                 span.ability-score
                                     +star(3)
                             li
-                                span.ability-title LESS
-                                span.ability-score
-                                    +star(3)
-                            li
                                 span.ability-title Responsive Design
                                 span.ability-score
                                     +star(3)
@@ -301,7 +311,7 @@ block abilities
                                 span.ability-score
                                     +star(2)
                             li
-                                span.ability-title Node.js / Express.js
+                                span.ability-title node.js / express.js
                                 span.ability-score
                                     +star(2)
 
@@ -324,17 +334,13 @@ block abilities
                                 span.ability-score
                                     +star(3)
                             li
-                                span.ability-title Drupal
-                                span.ability-score
-                                    +star(3)
-                            li
-                                span.ability-title Google Analytics
+                                span.ability-title Drupal, Wordpress
                                 span.ability-score
                                     +star(3)
 
             hr
             section
-                h3(data-sr='enter left') Tools
+                h3(data-sr='enter left') Others
                 .row
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
@@ -343,21 +349,18 @@ block abilities
                                 span.ability-score
                                     +star(4)
                             li
-                                span.ability-title Vagrant
+                                span.ability-title Vagrant / Docker
                                 span.ability-score
                                     +star(4)
+
+                    .col-md-6(data-sr='enter right')
+                        ul.no-bullets
                             li
                                 span.ability-title Jenkins
                                 span.ability-score
                                     +star(3)
-                    .col-md-6(data-sr='enter right')
-                        ul.no-bullets
                             li
-                                span.ability-title Confluence / Jira
-                                span.ability-score
-                                    +star(4)
-                            li
-                                span.ability-title Sequel Pro / phpMyAdmin
+                                span.ability-title MySQL
                                 span.ability-score
                                     +star(3)
 
@@ -381,6 +384,10 @@ block abilities
                                 span.ability-title German
                                 span.ability-score
                                     +blinkStar(2)
+                            li
+                                span.ability-title French
+                                span.ability-score
+                                    +blinkStar(0)
 
 block interests
     section.background-blue
