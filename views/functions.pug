@@ -17,3 +17,52 @@ mixin blinkStar(num)
     while start < total
         span.glyphicon.glyphicon-star-empty
         - start++
+
+mixin experience(company, dateRange, location, title, description)
+    .experience.row(data-sr='')
+        .col-md-4
+            h4= company
+            p.experience-period= dateRange
+            span.experience-details
+                span.location
+                    i.fa.fa-lg.fa-map-marker
+                    span= location
+        .col-md-8
+            p
+                strong= title
+            //- escape text since there might be <a> tags
+            p!= description
+
+mixin projectExperience(name, date, githubLink, tools, description)
+    .experience.row(data-sr='')
+        .col-md-4
+            h4= name
+            p.experience-period= date
+            span.experience-details
+                span.github
+                    i.fa.fa-lg.fa-github
+                    a(href=githubLink, target='_blank') Source Code
+        .col-md-8
+            p
+                strong= tools
+            //- escape text since there might be <a> tags
+            p!= description
+            if block
+                block
+
+mixin ability(name, stars, blink)
+    li
+        span.ability-title= name
+        span.ability-score
+            if blink
+                +blinkStar(stars)
+            else
+                +star(stars)
+
+mixin interest(name, imageSrc, description)
+    .row
+        .col-md-4&attributes(attributes)
+            img(src=imageSrc, alt=name, width='220', height='220')
+        .col-md-8.interest-content
+            h3= name
+            p= description
