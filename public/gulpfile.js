@@ -1,5 +1,5 @@
 var gulp                = require('gulp');
-var imageop             = require('gulp-image-optimization');
+var imagemin            = require('gulp-imagemin');
 var size                = require('gulp-filesize');
 var rename              = require('gulp-rename');
 var less                = require('gulp-less');
@@ -25,11 +25,11 @@ gulp.task('images', function() {
         'img/*.{gif,jpg,jpeg,png,svg}',
         '!**/dist/img/*'
     ], {base: './'})
-        .pipe(imageop({
-            optimizationLevel: 4,
-            progressive: true,
-            interlaced: true
-        }))
+        .pipe(imagemin([
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 4}),
+            imagemin.gifsicle({interlaced: true})
+        ]))
         .pipe(rename(function(path){
             path.dirname += '/../dist/img';
         }))
@@ -93,7 +93,7 @@ gulp.task("js", function(callback) {
 
         // Naming conventions of bundled files
         output: {
-            path: "./dist/js",
+            path: __dirname + "/dist/js",
             filename: "[name].bundle.js",
             chunkFilename: "[name].bundle.js",
             sourceMapFilename: "[file].map"
