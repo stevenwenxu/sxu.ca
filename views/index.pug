@@ -109,69 +109,108 @@ block experiences
             section
                 h3 Careers
                 .experiences
+                    +experience('Shopify Inc',
+                                'Sep 2017 - Dec 2017',
+                                'Ottawa, ON, Canada',
+                                'Developer Intern',
+                                'I am currently an intern at Shopify!',
+                                false)
+
+                    +experience('The Meet Group (formerly if(we))',
+                                'May 2017 - Aug 2017',
+                                'San Francisco, CA, USA',
+                                'Software Engineer Intern',
+                                'The proudest thing I\'ve done is that I made our Tagged iOS application compiler-warning-free. I cleared all 200+ warnings and even better, I developed features on top of an open source continuous integration tool - Buildasaur - that works with Xcode Bots and self-hosted Bitbucket, which ensures that every pull request passes unit tests and does not generate warnings. They rewarded me an $100 Amazon gift card as appreciation!',
+                                false)
+
                     +experience('Wattpad',
                                 'Sep 2016 - Dec 2016',
                                 'Toronto, Ontario, Canada',
-                                'iOS Developer',
-                                'Wattpad is how millions of users find, read and share stories that matter to them. As an iOS developer on the Audience/Voyager squad, I conducted various client side experiments with A/B testing for the onboarding process, home and search experience. I also helped the team adopt Swift and Auto Layout. I definitely learned tons of iOS related development experience.')
+                                'Associate Engineer, iOS',
+                                'Wattpad is how millions of users find, read and share stories that matter to them. As an iOS developer on the Audience/Voyager squad, I conducted various client side experiments with A/B testing for the onboarding process, home and search experience. I also helped the team adopt Swift and Auto Layout. I definitely learned tons of iOS related development experience.',
+                                false)
 
-                    +experience('WeMesh Inc.',
-                                'Jan 2016 - Apr 2016',
-                                'Kitchener, Ontario, Canada',
-                                'Software Engineering, iOS',
-                                'WeMesh is a true startup with only 4 full time employees, therefore I have gained quite different experiences. As a member of the iOS team, I touched every corner of the code base - from UI to new API integration, from major code refactor to localization and internationalization. WeMesh made me a fan of working in startup companies.')
+                    a.text-center.center-block(role='button', data-toggle='collapse', href='#collapseCareers', aria-expanded='false', aria-controls='collapseCareers') Show more
 
-                    +experience('Hootsuite Media Inc.',
-                                'May 2015 - Aug 2015',
-                                'Vancouver, British Columbia, Canada',
-                                'Software Engineering, JavaScript',
-                                'I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front-end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href="http://code.hootsuite.com/co-ops/steven-xu/">here</a>.')
+                    #collapseCareers.collapse
+                        +experience('WeMesh Inc.',
+                                    'Jan 2016 - Apr 2016',
+                                    'Kitchener, Ontario, Canada',
+                                    'Software Engineering, iOS',
+                                    'WeMesh is a true startup with only 4 full time employees, therefore I have gained quite different experiences. As a member of the iOS team, I touched every corner of the code base - from UI to new API integration, from major code refactor to localization and internationalization. WeMesh made me a fan of working in startup companies.',
+                                    true)
 
-                    +experience('Ontario Institute of Cancer Research',
-                                'Aug 2014 - Dec 2014',
-                                'Toronto, Ontario, Canada',
-                                'Web Developer and Themer',
-                                'At the webdev team at OICR, I explored various technologies and developed prototypes of web apps and services. With a team member, our "WEB SSH" tool won the best hack day project. I was also responsible for the technical parts of new employee training sessions. My presentation on HTML5 was considered "cool and resourceful". <a href="//blog.sxu.ca/coop/2015/01/19/web-developer-at-oicr.html">Read more</a>')
+                        +experience('Hootsuite Media Inc.',
+                                    'May 2015 - Aug 2015',
+                                    'Vancouver, British Columbia, Canada',
+                                    'Software Engineering, JavaScript',
+                                    'I absolutely enjoyed working with the Campaigns UX team at Hootsuite. I worked with a number of cutting edge front-end tools such as Webpack, Gulp, Jasmine etc, and worked on a variety of features. You can read about my contributions <a href="http://code.hootsuite.com/co-ops/steven-xu/">here</a>.',
+                                    true)
 
-                    +experience('EnglishFirst',
-                                'May 2013 - June 2013',
-                                'Beijing, China',
-                                'Teaching Assistant',
-                                'As a career starter, my primary task at EF was offering K-12 students personalized English lessons with focus on listening and writing skills, as well as assisting senior teachers in class (preparing materials, making demos, correcting homework and exam papers, etc). My communication skills and time management skills were greatly improved.')
+                        +experience('Ontario Institute of Cancer Research',
+                                    'Aug 2014 - Dec 2014',
+                                    'Toronto, Ontario, Canada',
+                                    'Web Developer and Themer',
+                                    'At the webdev team at OICR, I explored various technologies and developed prototypes of web apps and services. With a team member, our "WEB SSH" tool won the best hack day project. I was also responsible for the technical parts of new employee training sessions. My presentation on HTML5 was considered "cool and resourceful". <a href="//blog.sxu.ca/coop/2015/01/19/web-developer-at-oicr.html">Read more</a>',
+                                    true)
+
+                        +experience('EnglishFirst',
+                                    'May 2013 - June 2013',
+                                    'Beijing, China',
+                                    'Teaching Assistant',
+                                    'As a career starter, my primary task at EF was offering K-12 students personalized English lessons with focus on listening and writing skills, as well as assisting senior teachers in class (preparing materials, making demos, correcting homework and exam papers, etc). My communication skills and time management skills were greatly improved.',
+                                    true)
             hr
             section
                 h3 Projects
                 .experiences
+                    +projectExperience('Steven in Berlin',
+                                       'Apr 2017',
+                                       'https://github.com/stevenwenxu/GER298',
+                                       'https://berlin.sxu.ca',
+                                       'Markdown',
+                                       'I went to Berlin for the first time! What\'s better is that I was not only a tourist, but also someone who finally got to speak German with real Germans other than my profs! Doing a German Minor is the best part of my university life and this trip is a tribute to all the efforts I\'ve made in those years.',
+                                       false)
+
                     +projectExperience('Eastern T',
                                        'Sep 2016',
                                        'https://github.com/stevenwenxu/EasternT',
+                                       'https://www.youtube.com/watch?v=KyRCpg-hGoo',
                                        'Swift, Alamofire, node.js',
-                                       'I made this app with a group of friends during Hack The North 2016. It\'s a simutaneous interpreting (i.e. real time voice to voice translating) app. We used the new iOS 10 Speech.framework and Microsoft Translate for the basic functions, and a node.js web socket server for always-on cross-device conference call. It\'s really cool, check it out!')
-                        p.project-screenshots
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KyRCpg-hGoo" frameborder="0" allowfullscreen></iframe>
+                                       'I made this app with a group of friends during Hack The North 2016. It\'s a simutaneous interpreting (i.e. real time voice to voice translating) app. We used the new iOS 10 Speech.framework and Microsoft Translate for the basic functions, and a node.js web socket server for always-on cross-device conference call. It\'s really cool, check it out!',
+                                       false)
 
                     +projectExperience('On The Map',
                                        'Mar 2016',
                                        'https://github.com/stevenwenxu/On-The-Map-Udacity',
+                                       null,
                                        'Swift, Parse, Facebook SDK',
-                                       'Post your name, location and portfolio url, and see all other Udacity students on the map from around the world!')
+                                       'Post your name, location and portfolio url, and see all other Udacity students on the map from around the world!',
+                                       false)
                         p.project-screenshots
                             img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/Login.png' alt='Login screenshot' width=150)
                             img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/MapView.png' alt='MapView screenshot' width=150)
                             img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/TableView.png' alt='TableView screenshot' width=150)
                             img(src='https://raw.githubusercontent.com/stevenwenxu/On-The-Map-Udacity/master/screenshots/ShareLink.png' alt='ShareLink screenshot' width=150)
 
-                    +projectExperience('MyoMuse',
-                                       'Jan 2016',
-                                       'https://github.com/group536',
-                                       'Swift, Myo iOS SDK, RxJS',
-                                       'We won the first place at WaterlooHacks! When you are running with a Myo armband, the app chooses songs in your playlist that match your current running tempo. Your sprinting and jogging experience will never be the same again.')
+                    a.text-center.center-block(role='button', data-toggle='collapse', href='#collapseProjects', aria-expanded='false', aria-controls='collapseProjects') Show more
 
-                    +projectExperience('Personal Website',
-                                       'Oct 2014',
-                                       'https://github.com/stevenwenxu/stevenwenxu.github.io',
-                                       'HTML5, jQuery, CSS, Bootstrap',
-                                       'This website is running on Heroku with node.js. Some front-end packages involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="//blog.sxu.ca">Blog</a> is powered by Jekyll.')
+                    #collapseProjects.collapse
+                        +projectExperience('MyoMuse',
+                                           'Jan 2016',
+                                           'https://github.com/group536',
+                                           null,
+                                           'Swift, Myo iOS SDK, RxJS',
+                                           'We won the first place at WaterlooHacks! When you are running with a Myo armband, the app chooses songs in your playlist that match your current running tempo. Your sprinting and jogging experience will never be the same again.',
+                                           true)
+
+                        +projectExperience('Personal Website',
+                                           'Oct 2014',
+                                           'https://github.com/stevenwenxu/stevenwenxu.github.io',
+                                           null,
+                                           'HTML5, jQuery, CSS, Bootstrap',
+                                           'This website is running on Heroku with node.js. Some front-end packages involved: <a href="http://scrollrevealjs.org/">scrollReveal.js</a>, <a href="http://isotope.metafizzy.co/">Isotope</a>. This was a fun learning experience. The <a href="//blog.sxu.ca">Blog</a> is powered by Jekyll.',
+                                           true)
 
 block abilities
     section.background-white

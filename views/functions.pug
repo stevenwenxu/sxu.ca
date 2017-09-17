@@ -18,8 +18,8 @@ mixin blinkStar(num)
         span.glyphicon.glyphicon-star-empty
         - start++
 
-mixin experience(company, dateRange, location, title, description)
-    .experience.row(data-sr='')
+mixin experience(company, dateRange, location, title, description, disablesr)
+    mixin commonPart(company, dateRange, location, title, description)
         .col-md-4
             h4= company
             p.experience-period= dateRange
@@ -33,15 +33,27 @@ mixin experience(company, dateRange, location, title, description)
             //- escape text since there might be <a> tags
             p!= description
 
-mixin projectExperience(name, date, githubLink, tools, description)
-    .experience.row(data-sr='')
+    if disablesr
+        .experience.row
+            +commonPart(company, dateRange, location, title, description)
+    else
+        .experience.row(data-sr='')
+            +commonPart(company, dateRange, location, title, description)
+
+mixin projectExperience(name, date, githubLink, demoLink, tools, description, disablesr)
+    mixin commonPart(name, date, githubLink, demoLink, tools, description)
         .col-md-4
             h4= name
             p.experience-period= date
             span.experience-details
-                span.github
-                    i.fa.fa-lg.fa-github
-                    a(href=githubLink, target='_blank') Source Code
+                if githubLink
+                    span.github
+                        i.fa.fa-lg.fa-github
+                        a(href=githubLink, target='_blank') Source Code
+                if demoLink
+                    span.demo
+                        i.fa.fa-lg.fa-link
+                        a(href=demoLink, target='_blank') Demo
         .col-md-8
             p
                 strong= tools
@@ -49,6 +61,17 @@ mixin projectExperience(name, date, githubLink, tools, description)
             p!= description
             if block
                 block
+
+    if disablesr
+        .experience.row
+            +commonPart(name, date, githubLink, demoLink, tools, description)
+                if block
+                    block
+    else
+        .experience.row(data-sr='')
+            +commonPart(name, date, githubLink, demoLink, tools, description)
+                if block
+                    block
 
 mixin ability(name, stars, blink)
     li
