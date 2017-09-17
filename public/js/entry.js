@@ -121,6 +121,21 @@ var initBlinkStar = function() {
     addStar();
 };
 
+var handleCollapseClicked = function() {
+    var $collapseLinks = $('.collapse-link');
+    var $collapseContents = $('#collapseCareers, #collapseProjects');
+    $collapseContents.on('show.bs.collapse', function() {
+        $collapseLinks.each(function(index) {
+            $(this).text('Show less');
+        });
+    });
+    $collapseContents.on('hide.bs.collapse', function() {
+        $collapseLinks.each(function(index) {
+            $(this).text('Show more');
+        });
+    });
+};
+
 $(document).ready(function() {
     initScrollReveal();
     initSmoothScrolling();
@@ -129,4 +144,5 @@ $(document).ready(function() {
     initGATracking();
     initValidation();
     handleSubmitFeedback();
+    handleCollapseClicked();
 });
