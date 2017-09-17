@@ -70,7 +70,7 @@ block profile
                 .col-md-4
                     h3 About me
                     p
-                        | I am a 4A Computer Science student from University of Waterloo. I am an iOS developer, technology lover, half marathon runner and German learner.
+                        | I am a 4th year Computer Science student from University of Waterloo. I am an iOS developer, technology lover, half marathon runner and German learner.
                 .col-md-4.text-center
                     img#me(src='dist/img/steven.png', alt='Steven Xu')
                 .col-md-4
@@ -82,7 +82,7 @@ block profile
                         strong Age:
                     p 22
                     p
-                        strong Favorite Food:
+                        strong Favourite Food:
                     p Beef noodle soup
 
 block experiences
@@ -95,10 +95,10 @@ block experiences
                 h3 Education
                 .experiences
                     +experience('University of Waterloo',
-                                'Sep 2013 - present',
+                                'Sep 2013 - Apr 2018',
                                 'Waterloo, Ontario, Canada',
                                 'Candidate for Bachelor of Computer Science',
-                                'Going to Waterloo is the most important and successful desicion I have made in my life. Not only have I learned the fundamentals of CS from the best, but crucially I have acquired the spirit of always learning and always pushing myself forward. I enjoy studying and working with people who are more experienced and talented than me, and I strive to be one of them.')
+                                'Going to Waterloo is the most important and successful desicion I have made in my life. Not only have I learned the fundamentals of CS from the best, but I have acquired the spirit of always learning and always pushing myself forward. I enjoy studying and working with people who are more experienced and talented than me, and I strive to be one of them.')
 
                     +experience('National Institute of Technology',
                                 'Sep 2010 - Nov 2012',
@@ -223,14 +223,12 @@ block abilities
                 .row
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
-                            +ability('Swift', 3, true)
-                            +ability('Objective-C', 3)
-                            +ability('AFNetworking / Alamofire', 3)
+                            +ability('Swift', 4)
+                            +ability('Objective-C', 4)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
-                            +ability('Auto Layout / Manual Layout', 3)
-                            +ability('Core Data', 2)
+                            +ability('Auto Layout && Manual Layout', 3)
                             +ability('Instruments', 2)
             hr
             section
@@ -238,31 +236,23 @@ block abilities
                 .row
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
-                            +ability('HTML / CSS / JavaScript / jQuery', 4)
-                            +ability('Bootstrap', 3)
-                            +ability('Responsive Design', 3)
+                            +ability('node.js / express.js', 3)
                             +ability('PHP / Laravel', 2)
-                            +ability('node.js / express.js', 2)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
-                            +ability('Heroku / AWS EC2 / Digital Ocean', 4)
-                            +ability('Gulp', 3)
-                            +ability('Webpack', 3)
-                            +ability('CasperJS / Jasmine', 3)
-                            +ability('Drupal / Wordpress', 3)
+                            +ability('Heroku && AWS EC2', 4)
+                            +ability('Webpack && Gulp', 3)
             hr
             section
-                h3(data-sr='enter left') Others
+                h3(data-sr='enter left') Tools
                 .row
                     .col-md-6(data-sr='enter left')
                         ul.no-bullets
                             +ability('Git', 4)
-                            +ability('Vagrant / Docker', 4)
 
                     .col-md-6(data-sr='enter right')
                         ul.no-bullets
-                            +ability('Jenkins', 3)
                             +ability('MySQL', 3)
             hr
             section
@@ -357,4 +347,4 @@ block contact
 block credits
     section.background-gray
         #credits
-            | Themed by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, Inspired by <a href="http://onepagelove.com" target="_blank">OnePageLove</a>
+            | Themed by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>, inspired by <a href="http://onepagelove.com" target="_blank">OnePageLove</a>
