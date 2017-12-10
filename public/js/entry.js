@@ -52,16 +52,11 @@ var handleSubmitFeedback = function() {
     var $form = $('form'),
         $name = $form.find('#name'),
         $email = $form.find('#email'),
-        $message = $form.find('#message'),
-        captcha = '';
+        $message = $form.find('#message');
 
     $form.on('submit', function(ev) {
         ev.preventDefault();
-        captcha = grecaptcha.getResponse();
         if (!($form.valid())) {
-            return;
-        } else if (captcha.length === 0) {
-            alert('Please verify that you are not a bot.');
             return;
         }
         $.ajax({
@@ -70,13 +65,13 @@ var handleSubmitFeedback = function() {
             data: {
                 name: $name.val(),
                 email: $email.val(),
-                message: $message.val(),
-                recaptcha: captcha
+                message: $message.val()
             },
             success: function(data) {
                 if (data.success) {
                     alert('Thanks for your message!');
-                    grecaptcha.reset();
+                } else {
+                    alert('An error occured, please email me by using the button below, thanks!')
                 }
             }
         });

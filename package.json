@@ -11,10 +11,10 @@
     "node": "8.1.4"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "cookie-parser": "^1.4.3",
-    "edit-google-spreadsheet": "^0.2.21",
     "express": "^4.15.3",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
