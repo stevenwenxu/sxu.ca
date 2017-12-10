@@ -1,8 +1,9 @@
 var express = require('express');
-var spreadsheet = require('edit-google-spreadsheet');
-var config = require('../app/config');
 var router = express.Router();
 var https = require('https');
+var sgMail = require('@sendgrid/mail');
+
+sgMail.setApiKey(process.env.sendgridApiKey);
 
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Steven\'s website' });
@@ -13,83 +14,32 @@ router.get('/blog', function(req, res, next) {
 });
 
 router.post('/feedback', function(req, res) {
-    if (req.body.message === '' || req.body.name === '') {
+    if (req.body.message === '' || req.body.name === '' || req.body.email === '') {
         res.json({
             success: false,
-            message: 'Name and message fields are required.'
-        });
-        return;
-    } else if (req.body.recaptcha === '') {
-        res.json({
-            success: false,
-            message: 'Recaptcha not solved.'
+            message: 'All fields are required.'
         });
         return;
     }
 
-    var data = '',
-        postData = 'secret=' + config.recaptcha.secret + '&response=' + req.body.recaptcha,
-        options = {
-            hostname: 'www.google.com',
-            path: '/recaptcha/api/siteverify',
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Content-Length': postData.length
-            }
-        };
-
-    var httpsreq = https.request(options, function(httpsres) {
-        httpsres.setEncoding('utf8');
-        httpsres.on('data', function(chunk) {
-            data += chunk;
-        });
-        httpsres.on('end', function() {
-            var result = JSON.parse(data);
-            if (result.success) {
-                addToSpreadSheet(req.body.name, req.body.email, req.body.message, res);
-            } else {
-                res.json({
-                    success: false,
-                    message: result
-                });
-            }
-        });
-    });
-    httpsreq.write(postData);
-    httpsreq.end();
-});
-
-var addToSpreadSheet = function(name, email, msg, res) {
-    spreadsheet.load({
-        spreadsheetId: config.spreadsheetId,
-        worksheetId: config.worksheetId,
-        oauth2: config.oauth2
-    }, function sheetReady(err, sheet) {
-        if(err) {
-            throw err;
-        }
-        var next = -1;
-        sheet.receive(function(err, rows, info) {
-            if(err) {
-                throw err;
-            }
-            next = info.nextRow;
-            var json = {};
-            var currTime = new Date().toGMTString();
-            json[next] = { 1: currTime, 2: name, 3: email, 4: msg };
-            sheet.add(json);
-            sheet.send(function(err) { 
-                if(err) {
-                    throw err; 
-                }
-                res.json({
-                    success: true,
-                    message: ''
-                });
+    sgMail.send({
+        to: 'steven@sxu.ca',
+        from: req.body.email,
+        subject: 'sxu.ca contact form',
+        html: 'name: ' + req.body.name + '<br>message: ' + req.body.message
+    }, (error, result) => {
+        if (error) {
+            res.json({
+                success: false,
+                message: error
             });
-        });
+        } else {
+            res.json({
+                success: true,
+                message: result
+            });
+        }
     });
-};
+});
 
 module.exports = router;
