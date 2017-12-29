@@ -14,7 +14,7 @@ var initScrollReveal = function() {
 var initSmoothScrolling = function () {
     $('.navbar-right a, .navbar-brand').click(function(ev) {
         ev.preventDefault();
-        $('body').animate({
+        $('html,body').animate({
             scrollTop: $(this.hash).offset().top
         }, 600);
     });

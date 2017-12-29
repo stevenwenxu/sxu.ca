@@ -113,7 +113,7 @@ gulp.task("js", function(callback) {
             new webpack.IgnorePlugin(/\.\/locale$/),
 
             // Uglify
-            new webpack.optimize.UglifyJsPlugin()
+            new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
         ]
 
     }, function(err, stats) {
